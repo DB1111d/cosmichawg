@@ -218,13 +218,13 @@
       <div class="divider"></div>
       <p style="font-family:'Special Elite',cursive;letter-spacing:1px;color:rgba(245,237,214,0.5);margin-bottom:3rem;font-size:0.9rem;">For bookings, press inquiries, or just to say hey -- drop us a line.</p>
     </div>
-    <form class="contact-form reveal" onsubmit="return false;">
+    <form class="contact-form reveal" action="https://formspree.io/f/xzdalnrz" method="POST">
       <div class="form-row">
-        <input class="form-input" type="text" placeholder="Your Name">
-        <input class="form-input" type="email" placeholder="Email Address">
+        <input class="form-input" type="text" name="name" placeholder="Your Name" required>
+        <input class="form-input" type="email" name="email" placeholder="Email Address" required>
       </div>
-      <input class="form-input" type="text" placeholder="Subject (Booking / Press / General)">
-      <textarea class="form-textarea" placeholder="Your Message..."></textarea>
+      <input class="form-input" type="text" name="subject" placeholder="Subject (Booking / Press / General)">
+      <textarea class="form-textarea" name="message" placeholder="Your Message..." required></textarea>
       <button class="form-submit" type="submit">Send It &#10022;</button>
     </form>
     <div class="social-links reveal">
