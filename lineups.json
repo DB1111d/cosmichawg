@@ -11,7 +11,7 @@
         { "name": "Dan B.", "role": "Guitar / Vocals" },
         { "name": "Jeff F.", "role": "Guitar" },
         { "name": "Chris K.", "role": "Bass" },
-        { "name": "Chuck", "role": "Percussion" },
+        { "name": "Skip", "role": "Percussion" },
         { "name": "Ryan T.", "role": "Drums" }
       ]
     },
@@ -35,7 +35,10 @@
       "city": "Greenville, SC",
       "date": { "month": "Oct", "day": "04", "year": "2025" },
       "lineup": [
-        { "name": "", "role": "" }
+        { "name": "Dan B.", "role": "Guitar / Vocals" },
+        { "name": "Jeff F.", "role": "Guitar" },
+        { "name": "Chris K.", "role": "Bass" },
+        { "name": "Ryan T.", "role": "Drums" }
       ]
     },
     {
@@ -44,7 +47,11 @@
       "city": "Greenville, SC",
       "date": { "month": "Sep", "day": "14", "year": "2025" },
       "lineup": [
-        { "name": "", "role": "" }
+        { "name": "Dan B.", "role": "Guitar / Vocals" },
+        { "name": "Jeff F.", "role": "Guitar" },
+        { "name": "Chris K.", "role": "Bass" },
+        { "name": "Roman", "role": "Saxophone" },
+        { "name": "Ryan T.", "role": "Drums" }
       ]
     }
   ]
