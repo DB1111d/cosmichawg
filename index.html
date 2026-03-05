@@ -74,7 +74,8 @@
   .shows-panel.active { display: block; }
   .no-shows { font-family: 'Special Elite', cursive; font-size: 1rem; letter-spacing: 3px; color: var(--brown); padding: 3rem 0; text-align: center; border-top: 1px solid rgba(59,31,10,0.15); border-bottom: 1px solid rgba(59,31,10,0.15); }
   .tour-list { display: flex; flex-direction: column; }
-  .tour-item { display: grid; grid-template-columns: 80px 1fr auto; align-items: center; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(59,31,10,0.15); }
+  .tour-item { display: grid; grid-template-columns: 80px 1fr; align-items: center; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(59,31,10,0.15); }
+  @media (min-width: 640px) { .tour-item { grid-template-columns: 80px 1fr auto; } }
   .tour-item:first-child { border-top: 1px solid rgba(59,31,10,0.15); }
   .tour-date-box { text-align: center; background: var(--dark); padding: 0.8rem; }
   .tour-month { font-family: 'Special Elite', cursive; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--mustard); }
@@ -156,27 +157,32 @@
     .tab-btn { font-size: 1.2rem; padding: 0.75rem 1.5rem 0.75rem 0; }
     .tour-item { grid-template-columns: 65px 1fr; grid-template-rows: auto auto; gap: 0.5rem 1rem; padding: 1.2rem 0; align-items: start; }
     .tour-ticket-btn, .past-label { display: none; }
-    .tour-item .tour-date-box { grid-column: 1; grid-row: 1; align-self: start; }
+    .tour-item .tour-date-box { grid-column: 1; grid-row: 1 / 3; align-self: start; }
     .tour-item > div:nth-child(2) { grid-column: 2; grid-row: 1; align-self: start; }
-    .tour-item .lineup-btn { grid-column: 1; grid-row: 2; justify-self: stretch; font-size: 0.55rem; padding: 3px 4px; text-align: center; }
+    .tour-item .show-btns { grid-column: 2; grid-row: 2; justify-self: start; flex-direction: row; gap: 0.3rem; margin-top: 0.3rem; }
     .tour-venue { font-size: 0.95rem; }
     .tour-city { font-size: 0.75rem; }
 
     /* Contact form */
     .form-row { grid-template-columns: 1fr; }
 
-    /* Social links */
-    .social-links { flex-wrap: wrap; gap: 1.2rem; }
+    .hero-social-links { padding: 0 1.5rem; gap: 1rem; }
     .social-link { font-size: 0.7rem; }
 
     /* Footer */
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 1.5rem 1.2rem; }
   }
 
-  /* Lineup button */
-  .lineup-btn {
-    background: #3b1f0a;
-    border: 2px solid #3b1f0a;
+  /* Lineup + Setlist buttons */
+  .show-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .lineup-btn, .setlist-btn {
+    background: #2a1a08;
+    border: 2px solid #2a1a08;
     color: #f0e6c8;
     font-family: 'Special Elite', cursive;
     font-size: 0.85rem;
@@ -188,9 +194,8 @@
     transition: background 0.2s, color 0.2s;
     white-space: nowrap;
     display: inline-block;
-    align-self: center;
   }
-  .lineup-btn:hover { background: #5a3015; border-color: #5a3015; color: #f0e6c8; }
+  .lineup-btn:hover, .setlist-btn:hover { background: #3b1f0a; border-color: #3b1f0a; color: #f0e6c8; }
 
   /* Lineup Modal */
   #lineup-modal {
@@ -265,12 +270,14 @@
       align-items: center;
       justify-content: center;
     }
-    .tour-item .lineup-btn {
-      grid-column: 2;
-      justify-self: start;
-      margin-top: 0.2rem;
-      font-size: 0.55rem;
-      padding: 16px 8px;
+    .tour-item .lineup-btn,
+    .tour-item .setlist-btn {
+      font-size: 0.7rem;
+      padding: 10px 10px;
+    }
+    .tour-item .show-btns {
+      flex-direction: row;
+      gap: 0.3rem;
     }
     .tour-item > div:not(.tour-date-box) {
       padding-top: 0.4rem;
@@ -288,7 +295,7 @@
   <a class="nav-logo" href="#">Cosmic Hawg</a>
   <ul class="nav-links">
     <li><a href="#shows" class="nav-shows">Shows</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact-form">Contact</a></li>
   </ul>
 </nav>
 
@@ -373,10 +380,9 @@
   <div class="contact-inner">
     <div class="reveal">
 
-      <h2 class="section-title" style="font-size:clamp(3.5rem,8vw,6rem);">Booking<br><span style="font-size:1.1em;">&amp;</span><br>Contact</h2>
+      <h2 id="contact-form" class="section-title" style="font-size:clamp(3.5rem,8vw,6rem); scroll-margin-top: 80px;">Booking<br><span style="font-size:1.1em;">&amp;</span><br>Contact</h2>
       <div class="divider"></div>
       <p style="font-family:'Special Elite',cursive;letter-spacing:1px;color:rgba(245,237,214,0.5);margin-bottom:3rem;font-size:0.9rem;">For bookings, press inquiries, or just to say hey -- drop us a line.</p>
-    </div>
     <form class="contact-form reveal" action="https://formspree.io/f/xzdalnrz" method="POST">
       <div class="form-row">
         <input class="form-input" type="text" name="name" placeholder="Your Name" required>
@@ -423,10 +429,10 @@
   // ── SHOW DATA ──────────────────────────────────────────────
   // date: 'YYYY-MM-DD', lineupId: optional (shows Lineup btn in Previous)
   const ALL_SHOWS = [
-    { date: '2025-11-28', venue: 'Poe Mill Music Hall',           city: 'Greenville, SC', lineupId: 'poemill-2025-11-28' },
-    { date: '2025-10-25', venue: 'Corey James Memorial Good Time Benefit', city: 'Greer, SC', lineupId: 'corey-james-2025-10-25' },
-    { date: '2025-10-04', venue: 'Artistry Workshops & Gallery',  city: 'Greenville, SC', lineupId: 'artistry-2025-10-04' },
-    { date: '2025-09-14', venue: 'Smileys on the Roxx',           city: 'Greenville, SC', lineupId: 'smileys-2025-09-14' },
+    { date: '2025-11-28', venue: 'Poe Mill Music Hall',           city: 'Greenville, SC', lineupId: 'poemill-2025-11-28', setlistId: 'poemill-2025-11-28' },
+    { date: '2025-10-25', venue: 'Corey James Memorial Good Time Benefit', city: 'Greer, SC', lineupId: 'corey-james-2025-10-25', setlistId: 'corey-james-2025-10-25' },
+    { date: '2025-10-04', venue: 'Artistry Workshops & Gallery',  city: 'Greenville, SC', lineupId: 'artistry-2025-10-04', setlistId: 'artistry-2025-10-04' },
+    { date: '2025-09-14', venue: 'Smileys on the Roxx',           city: 'Greenville, SC', lineupId: 'smileys-2025-09-14', setlistId: 'smileys-2025-09-14' },
   ];
 
   const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -449,8 +455,18 @@
       <p class="tour-city">${show.city}</p>
     </div>`;
 
-    const action = isPast && show.lineupId
-      ? `<button class="lineup-btn" onclick="showLineup('${show.lineupId}')">Lineup</button>`
+    const action = isPast
+      ? (() => {
+          const lineupBtn = show.lineupId
+            ? `<button class="lineup-btn" onclick="showLineup('${show.lineupId}')">Lineup</button>`
+            : '';
+          const setlistBtn = show.setlistId
+            ? `<button class="setlist-btn" onclick="showSetlist('${show.setlistId}')">Setlist</button>`
+            : '';
+          return (lineupBtn || setlistBtn)
+            ? `<div class="show-btns">${lineupBtn}${setlistBtn}</div>`
+            : '';
+        })()
       : '';
 
     item.innerHTML = dateBox + info + action;
@@ -574,13 +590,182 @@
   }
 
   document.addEventListener('click', function(e) {
-    const modal = document.getElementById('lineup-modal');
-    if (modal && e.target === modal) modal.classList.remove('open');
+    const lineupModal = document.getElementById('lineup-modal');
+    if (lineupModal && e.target === lineupModal) lineupModal.classList.remove('open');
+    const setlistModal = document.getElementById('setlist-modal');
+    if (setlistModal && e.target === setlistModal) setlistModal.classList.remove('open');
+    const songHistoryModal = document.getElementById('song-history-modal');
+    if (songHistoryModal && e.target === songHistoryModal) songHistoryModal.classList.remove('open');
   });
+
+  // ── Setlist popup ──
+  let setlistData = null;
+  (async () => {
+    try {
+      const res = await fetch('/setlists.json');
+      setlistData = await res.json();
+    } catch(e) { console.warn('Could not load setlists.json', e); }
+  })();
+
+  // Build a map of songTitle -> [{date, venue, city}] across all shows
+  function buildSongHistory() {
+    if (!setlistData) return {};
+    const map = {};
+    setlistData.shows.forEach(show => {
+      (show.setlist || []).forEach(song => {
+        const key = song.title.toLowerCase().trim();
+        if (!map[key]) map[key] = { title: song.title, plays: [] };
+        map[key].plays.push({
+          month: show.date.month,
+          day: show.date.day,
+          year: show.date.year,
+          venue: show.venue,
+          city: show.city
+        });
+      });
+    });
+    return map;
+  }
+
+  function showSetlist(id) {
+    const noData = !setlistData || !setlistData.shows.find(s => s.id === id);
+    if (noData) {
+      document.getElementById('setlist-title').textContent = 'Setlist coming soon.';
+      document.getElementById('setlist-date').textContent = '';
+      document.getElementById('setlist-list').innerHTML = '';
+      document.getElementById('setlist-modal').classList.add('open');
+      return;
+    }
+    const show = setlistData.shows.find(s => s.id === id);
+    const songHistory = buildSongHistory();
+    document.getElementById('setlist-title').textContent = show.venue;
+    document.getElementById('setlist-date').textContent =
+      show.date.month + ' ' + show.date.day + ', ' + show.date.year + ' — ' + show.city;
+    document.getElementById('setlist-list').innerHTML = show.setlist
+      .map((song, i) => {
+        const key = song.title.toLowerCase().trim();
+        const count = songHistory[key] ? songHistory[key].plays.length : 1;
+        return `<div class="setlist-row">
+          <span class="setlist-num">${i + 1}.</span>
+          <span class="setlist-song">
+            <a class="song-link" href="#" onclick="showSongHistory('${song.title.replace(/'/g,"\\'")}');return false;">${song.title}</a>
+          </span>
+          <span class="setlist-times">${count}×</span>
+        </div>`;
+      })
+      .join('');
+    document.getElementById('setlist-modal').classList.add('open');
+  }
+
+  function showSongHistory(title) {
+    const songHistory = buildSongHistory();
+    const key = title.toLowerCase().trim();
+    const entry = songHistory[key];
+    const count = entry ? entry.plays.length : 0;
+    document.getElementById('song-history-title').textContent = title;
+    document.getElementById('song-history-count').textContent = 'Times Played: ' + count;
+    document.getElementById('song-history-list').innerHTML = '';
+    document.getElementById('setlist-modal').classList.remove('open');
+    document.getElementById('song-history-modal').classList.add('open');
+  }
+
 
 </script>
 
-<!-- Lineup Modal -->
+<!-- Setlist Modal -->
+<div id="setlist-modal">
+  <div class="modal-box">
+    <button class="close-btn" onclick="document.getElementById('setlist-modal').classList.remove('open')">X</button>
+    <h3 id="setlist-title"></h3>
+    <p class="modal-date" id="setlist-date"></p>
+    <div id="setlist-list"></div>
+  </div>
+</div>
+
+<style>
+  #setlist-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+  #setlist-modal.open { display: flex; }
+  #setlist-modal .modal-box {
+    background: #1a1008;
+    border: 1px solid #b8860b;
+    color: #f0e6c8;
+    padding: 2rem 2.5rem;
+    min-width: 300px;
+    max-width: 460px;
+    width: 90%;
+    position: relative;
+    border-radius: 3px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  #setlist-modal h3 {
+    color: #c9a84c;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    text-align: center;
+  }
+  #setlist-modal .modal-date {
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #b8860b;
+    margin-bottom: 1.4rem;
+  }
+  #setlist-modal .setlist-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(184,134,11,0.2);
+    font-size: 0.92rem;
+  }
+  #setlist-modal .setlist-row:last-child { border-bottom: none; }
+  #setlist-modal .setlist-num {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.7rem;
+    color: #b8860b;
+    min-width: 1.4rem;
+    letter-spacing: 1px;
+  }
+  #setlist-modal .setlist-song { font-family: 'Playfair Display', serif; }
+  #setlist-modal .song-link {
+    color: #f0e6c8;
+    text-decoration: underline;
+    text-decoration-color: rgba(184,134,11,0.5);
+    text-underline-offset: 3px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  #setlist-modal .song-link:hover { color: #c9a84c; }
+  #setlist-modal .setlist-times {
+    margin-left: auto;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+    color: #b8860b;
+    white-space: nowrap;
+  }
+  #setlist-modal .close-btn {
+    position: absolute;
+    top: 10px; right: 14px;
+    background: none; border: none;
+    color: #b8860b; font-size: 1.3rem;
+    cursor: pointer; line-height: 1;
+  }
+</style>
+
 <div id="lineup-modal">
   <div class="modal-box">
     <button class="close-btn" onclick="document.getElementById('lineup-modal').classList.remove('open')">X</button>
@@ -590,5 +775,85 @@
   </div>
 </div>
 
+<!-- Song History Modal -->
+<div id="song-history-modal">
+  <div class="modal-box" style="text-align:center; padding: 2.5rem 2.5rem;">
+    <button class="close-btn" onclick="document.getElementById('song-history-modal').classList.remove('open');document.getElementById('setlist-modal').classList.add('open')">&#8592;</button>
+    <h3 id="song-history-title"></h3>
+    <p class="modal-date" id="song-history-count" style="font-size:1rem; margin-top: 1.2rem; letter-spacing:3px;"></p>
+    <div id="song-history-list"></div>
+  </div>
+</div>
+
+<style>
+  #song-history-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+  }
+  #song-history-modal.open { display: flex; }
+  #song-history-modal .modal-box {
+    background: #1a1008;
+    border: 1px solid #b8860b;
+    color: #f0e6c8;
+    padding: 2rem 2.5rem;
+    min-width: 300px;
+    max-width: 460px;
+    width: 90%;
+    position: relative;
+    border-radius: 3px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  #song-history-modal h3 {
+    color: #c9a84c;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    text-align: center;
+  }
+  #song-history-modal .modal-date {
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #b8860b;
+    margin-bottom: 1.4rem;
+  }
+  #song-history-modal .history-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(184,134,11,0.2);
+  }
+  #song-history-modal .history-row:last-child { border-bottom: none; }
+  #song-history-modal .history-date {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #b8860b;
+  }
+  #song-history-modal .history-venue {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    color: #f0e6c8;
+  }
+  #song-history-modal .close-btn {
+    position: absolute;
+    top: 10px; left: 14px;
+    background: none; border: none;
+    color: #b8860b; font-size: 1.3rem;
+    cursor: pointer; line-height: 1;
+  }
+</style>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d6f07eaa497743c5af76fa0f55330ebb"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
