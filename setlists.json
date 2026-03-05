@@ -1,0 +1,46 @@
+{
+  "shows": [
+    {
+      "id": "poemill-2025-11-28",
+      "venue": "Poe Mill Music Hall",
+      "city": "Greenville, SC",
+      "date": { "month": "Nov", "day": "28", "year": "2025" },
+      "setlist": [
+        { "title": "Graziatto" }
+      ]
+    },
+    {
+      "id": "corey-james-2025-10-25",
+      "venue": "Corey James Memorial Good Time Benefit",
+      "city": "Greer, SC",
+      "date": { "month": "Oct", "day": "25", "year": "2025" },
+      "setlist": [
+        { "title": "Graziatto" }
+      ]
+    },
+    {
+      "id": "artistry-2025-10-04",
+      "venue": "Artistry Workshops & Gallery",
+      "city": "Greenville, SC",
+      "date": { "month": "Oct", "day": "4", "year": "2025" },
+      "setlist": [
+        { "title": "Graziatto" }
+      ]
+    },
+    {
+      "id": "smileys-2025-09-14",
+      "venue": "Smileys on the Roxx",
+      "city": "Greenville, SC",
+      "date": { "month": "Sep", "day": "14", "year": "2025" },
+      "setlist": [
+        { "title": "One More Time (Try Me)" },
+        { "title": "Nightrider" },
+        { "title": "Grettings" },
+        { "title": "Graziatto" },
+        { "title": "Down By The River" },
+        { "title": "G13" },
+        { "title": "It Ain't No Use" }
+      ]
+    }
+  ]
+}
