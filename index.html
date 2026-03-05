@@ -664,7 +664,13 @@
     const count = entry ? entry.plays.length : 0;
     document.getElementById('song-history-title').textContent = title;
     document.getElementById('song-history-count').textContent = 'Times Played: ' + count;
-    document.getElementById('song-history-list').innerHTML = '';
+    document.getElementById('song-history-list').innerHTML = entry
+      ? entry.plays.map(p => `
+          <div class="history-row">
+            <span class="history-date">${p.month} ${p.day}, ${p.year}</span>
+            <span class="history-venue">${p.venue} — ${p.city}</span>
+          </div>`).join('')
+      : '<p style="text-align:center;opacity:0.5;font-family:Special Elite,cursive;letter-spacing:2px;font-size:0.8rem;margin-top:1rem;">No history found.</p>';
     document.getElementById('setlist-modal').classList.remove('open');
     document.getElementById('song-history-modal').classList.add('open');
   }
