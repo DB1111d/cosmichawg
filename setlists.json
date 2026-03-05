@@ -6,7 +6,15 @@
       "city": "Greenville, SC",
       "date": { "month": "Nov", "day": "28", "year": "2025" },
       "setlist": [
-        { "title": "Graziatto" }
+        { "title": "Graziatto" },
+        { "title": "All My Days" },
+        { "title": "Stay" },
+        { "title": "Down By The River" },
+        { "title": "Greetings" },
+        { "title": "Night Rider" },
+        { "title": "G13" },
+        { "title": "One More Time (Try Me)" },
+        { "title": "It Ain't No Use" }
       ]
     },
     {
@@ -15,7 +23,15 @@
       "city": "Greer, SC",
       "date": { "month": "Oct", "day": "25", "year": "2025" },
       "setlist": [
-        { "title": "Graziatto" }
+        { "title": "Down By The River" },
+        { "title": "Graziatto" },
+        { "title": "Stay" },
+        { "title": "Rollo" },
+        { "title": "One More Time (Try Me)" },
+        { "title": "It Ain't No Use" },
+        { "title": "Nightrider" },
+        { "title": "Right Place Wrong Time" },
+        { "title": "G13" }
       ]
     },
     {
@@ -24,7 +40,16 @@
       "city": "Greenville, SC",
       "date": { "month": "Oct", "day": "4", "year": "2025" },
       "setlist": [
-        { "title": "Graziatto" }
+        { "title": "Sabrosa" },
+        { "title": "One More Time (Try Me)" },
+        { "title": "All My Days" },
+        { "title": "Greetings" },
+        { "title": "Down By The River" },
+        { "title": "Graziatto" },
+        { "title": "Red Moon" },
+        { "title": "G13" },
+        { "title": "Nightrider" },
+        { "title": "It Ain't No Use" }
       ]
     },
     {
