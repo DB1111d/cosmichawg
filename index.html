@@ -4,15 +4,79 @@
 <meta charset="UTF-8">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cosmic Hawg</title>
+<title>Cosmic Hawg | Live Music from Greenville, SC</title>
+
+<!-- Primary SEO -->
+<meta name="description" content="Cosmic Hawg is a live band from Greenville, South Carolina. Check out upcoming shows, listen to music on Spotify & Apple Music, and book us for your next event.">
+<meta name="keywords" content="Cosmic Hawg, Greenville SC band, live music Greenville South Carolina, Upstate SC music, rock band SC, book a band Greenville, Cosmic Hawg shows, Cosmic Hawg tickets">
+<meta name="author" content="Cosmic Hawg">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://cosmichawg.com/">
+
+<!-- Open Graph (Facebook, LinkedIn, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cosmichawg.com/">
+<meta property="og:title" content="Cosmic Hawg | Live Music from Greenville, SC">
+<meta property="og:description" content="Cosmic Hawg is a live band from Greenville, South Carolina. Check out upcoming shows, stream our music, and get in touch for bookings.">
+<meta property="og:image" content="https://raw.githubusercontent.com/DB1111d/cosmichawg/main/Untitled-1%20copy.jpg">
+<meta property="og:image:alt" content="Cosmic Hawg performing live">
+<meta property="og:site_name" content="Cosmic Hawg">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cosmic Hawg | Live Music from Greenville, SC">
+<meta name="twitter:description" content="Cosmic Hawg is a live band from Greenville, South Carolina. Check out upcoming shows, stream our music, and get in touch for bookings.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/DB1111d/cosmichawg/main/Untitled-1%20copy.jpg">
+<meta name="twitter:image:alt" content="Cosmic Hawg performing live">
+
+<!-- Geo / Local SEO -->
+<meta name="geo.region" content="US-SC">
+<meta name="geo.placename" content="Greenville, South Carolina">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Cosmic Hawg",
+  "url": "https://cosmichawg.com/",
+  "description": "Cosmic Hawg is a live band based in Greenville, South Carolina, established in 2025.",
+  "foundingDate": "2025",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Greenville, South Carolina",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Greenville",
+      "addressRegion": "SC",
+      "addressCountry": "US"
+    }
+  },
+  "image": "https://raw.githubusercontent.com/DB1111d/cosmichawg/main/Untitled-1%20copy.jpg",
+  "sameAs": [
+    "https://www.instagram.com/cosmichawg/",
+    "https://www.facebook.com/cosmichawg/",
+    "https://www.youtube.com/channel/UCTYUU4MMdKEZurCivjfi0pg",
+    "https://open.spotify.com/artist/2IaknhjIk86A9TJs6zalY6",
+    "https://music.apple.com/us/artist/cosmic-hawg/1805646682"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Booking",
+    "url": "https://cosmichawg.com/#contact-form"
+  }
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root { --cream: #f5edd6; --rust: #c1440e; --mustard: #d4a017; --brown: #3b1f0a; --tan: #b8935a; --dark: #1a0d02; --pink: #e8826a; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { background-color: var(--cream); color: var(--brown); font-family: 'Josefin Sans', sans-serif; overflow-x: hidden; }
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; background: var(--dark); border-bottom: 3px solid var(--mustard); }
-  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; color: var(--mustard); letter-spacing: 2px; text-decoration: none; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; background: #0e0702; border-bottom: 3px solid var(--mustard); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; color: var(--mustard); font-style: italic; text-decoration: none; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a { font-family: 'Special Elite', cursive; font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; color: var(--cream); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--mustard); }
@@ -418,265 +482,7 @@
 
 </footer>
 
-<script>
-  function switchTab(tab, btn) {
-    document.querySelectorAll('.shows-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('panel-' + tab).classList.add('active');
-    btn.classList.add('active');
-  }
-
-  // ── SHOW DATA ──────────────────────────────────────────────
-  // date: 'YYYY-MM-DD', lineupId: optional (shows Lineup btn in Previous)
-  const ALL_SHOWS = [
-    { date: '2025-11-28', venue: 'Poe Mill Music Hall',           city: 'Greenville, SC', lineupId: 'poemill-2025-11-28', setlistId: 'poemill-2025-11-28' },
-    { date: '2025-10-25', venue: 'Corey James Memorial Good Time Benefit', city: 'Greer, SC', lineupId: 'corey-james-2025-10-25', setlistId: 'corey-james-2025-10-25' },
-    { date: '2025-10-04', venue: 'Artistry Workshops & Gallery',  city: 'Greenville, SC', lineupId: 'artistry-2025-10-04', setlistId: 'artistry-2025-10-04' },
-    { date: '2025-09-14', venue: 'Smileys on the Roxx',           city: 'Greenville, SC', lineupId: 'smileys-2025-09-14', setlistId: 'smileys-2025-09-14' },
-  ];
-
-  const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const SHOWS_PER_PAGE = 4;
-  const paginationState = {};
-
-  function buildShowItem(show, isPast) {
-    const [year, month, day] = show.date.split('-');
-    const item = document.createElement('div');
-    item.className = 'tour-item' + (isPast ? ' past' : '');
-
-    const dateBox = `<div class="tour-date-box">
-      <p class="tour-month">${MONTHS[parseInt(month)-1]}</p>
-      <p class="tour-day">${day}</p>
-      <span class="tour-year">${year}</span>
-    </div>`;
-
-    const info = `<div>
-      <p class="tour-venue">${show.venue}</p>
-      <p class="tour-city">${show.city}</p>
-    </div>`;
-
-    const action = isPast
-      ? (() => {
-          const lineupBtn = show.lineupId
-            ? `<button class="lineup-btn" onclick="showLineup('${show.lineupId}')">Lineup</button>`
-            : '';
-          const setlistBtn = show.setlistId
-            ? `<button class="setlist-btn" onclick="showSetlist('${show.setlistId}')">Setlist</button>`
-            : '';
-          return (lineupBtn || setlistBtn)
-            ? `<div class="show-btns">${lineupBtn}${setlistBtn}</div>`
-            : '';
-        })()
-      : '';
-
-    item.innerHTML = dateBox + info + action;
-    return item;
-  }
-
-  function renderShows() {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
-    const upcoming = ALL_SHOWS
-      .filter(s => new Date(s.date + 'T00:00:00') >= today)
-      .sort((a, b) => a.date.localeCompare(b.date));
-
-    const previous = ALL_SHOWS
-      .filter(s => new Date(s.date + 'T00:00:00') < today)
-      .sort((a, b) => b.date.localeCompare(a.date));
-
-    const upcomingList = document.getElementById('list-upcoming');
-    const previousList = document.getElementById('list-previous');
-    upcomingList.innerHTML = '';
-    previousList.innerHTML = '';
-
-    if (upcoming.length === 0) {
-      document.getElementById('no-upcoming').style.display = '';
-    } else {
-      upcoming.forEach(s => upcomingList.appendChild(buildShowItem(s, false)));
-    }
-
-    if (previous.length === 0) {
-      document.getElementById('no-previous').style.display = '';
-    } else {
-      previous.forEach(s => previousList.appendChild(buildShowItem(s, true)));
-    }
-
-    initPagination('upcoming');
-    initPagination('previous');
-  }
-
-  function initPagination(panelId) {
-    const list = document.getElementById('list-' + panelId);
-    if (!list) return;
-    const items = Array.from(list.querySelectorAll('.tour-item'));
-    if (items.length === 0) return;
-    paginationState[panelId] = 1;
-    renderPage(panelId, items);
-  }
-
-  function renderPage(panelId, items) {
-    const page = paginationState[panelId];
-    const totalPages = Math.ceil(items.length / SHOWS_PER_PAGE);
-    const start = (page - 1) * SHOWS_PER_PAGE;
-    const end = start + SHOWS_PER_PAGE;
-    items.forEach((item, i) => {
-      item.style.display = (i >= start && i < end) ? '' : 'none';
-    });
-    const paginationEl = document.getElementById('pagination-' + panelId);
-    if (!paginationEl) return;
-    paginationEl.innerHTML = '';
-    if (totalPages <= 1) return;
-    for (let i = 1; i <= totalPages; i++) {
-      const btn = document.createElement('button');
-      btn.className = 'page-btn' + (i === page ? ' active' : '');
-      btn.textContent = i;
-      btn.addEventListener('click', () => {
-        paginationState[panelId] = i;
-        renderPage(panelId, items);
-        const tabsEl = document.getElementById('shows-tabs-anchor');
-        const offset = tabsEl.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top: offset, behavior: 'smooth' });
-      });
-      paginationEl.appendChild(btn);
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    renderShows();
-  });
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-
-  function loadVideo() {
-    var facade = document.getElementById('yt-facade');
-    var iframe = document.getElementById('yt-iframe');
-    facade.style.display = 'none';
-    iframe.src = 'https://www.youtube.com/embed/AJsZSgBB1mw?autoplay=1&rel=0';
-    document.getElementById('yt-iframe-wrap').style.display = 'block';
-    iframe.style.display = 'block';
-  }
-
-
-  // Ã¢ÂÂÃ¢ÂÂ Lineup popup Ã¢ÂÂÃ¢ÂÂ
-  let lineupData = null;
-  (async () => {
-    try {
-      const res = await fetch('/lineups.json');
-      lineupData = await res.json();
-    } catch(e) { console.warn('Could not load lineups.json', e); }
-  })();
-
-  function showLineup(id) {
-    const noData = !lineupData || !lineupData.shows.find(s => s.id === id);
-    if (noData) {
-      document.getElementById('lineup-title').textContent = 'Lineup coming soon.';
-      document.getElementById('lineup-date').textContent = '';
-      document.getElementById('lineup-list').innerHTML = '';
-      document.getElementById('lineup-modal').classList.add('open');
-      return;
-    }
-    const show = lineupData.shows.find(s => s.id === id);
-    document.getElementById('lineup-title').textContent = show.venue;
-    document.getElementById('lineup-date').textContent =
-      show.date.month + ' ' + show.date.day + ', ' + show.date.year + ' - ' + show.city;
-    document.getElementById('lineup-list').innerHTML = show.lineup
-      .map(m => '<div class="lineup-row"><span class="lineup-name">' + m.name + '</span><span class="lineup-role">' + m.role + '</span></div>')
-      .join('');
-    document.getElementById('lineup-modal').classList.add('open');
-  }
-
-  document.addEventListener('click', function(e) {
-    const lineupModal = document.getElementById('lineup-modal');
-    if (lineupModal && e.target === lineupModal) lineupModal.classList.remove('open');
-    const setlistModal = document.getElementById('setlist-modal');
-    if (setlistModal && e.target === setlistModal) setlistModal.classList.remove('open');
-    const songHistoryModal = document.getElementById('song-history-modal');
-    if (songHistoryModal && e.target === songHistoryModal) songHistoryModal.classList.remove('open');
-  });
-
-  // ── Setlist popup ──
-  let setlistData = null;
-  (async () => {
-    try {
-      const res = await fetch('/setlists.json');
-      setlistData = await res.json();
-    } catch(e) { console.warn('Could not load setlists.json', e); }
-  })();
-
-  // Build a map of songTitle -> [{date, venue, city}] across all shows
-  function buildSongHistory() {
-    if (!setlistData) return {};
-    const map = {};
-    setlistData.shows.forEach(show => {
-      (show.setlist || []).forEach(song => {
-        const key = song.title.toLowerCase().trim();
-        if (!map[key]) map[key] = { title: song.title, plays: [] };
-        map[key].plays.push({
-          month: show.date.month,
-          day: show.date.day,
-          year: show.date.year,
-          venue: show.venue,
-          city: show.city
-        });
-      });
-    });
-    return map;
-  }
-
-  function showSetlist(id) {
-    const noData = !setlistData || !setlistData.shows.find(s => s.id === id);
-    if (noData) {
-      document.getElementById('setlist-title').textContent = 'Setlist coming soon.';
-      document.getElementById('setlist-date').textContent = '';
-      document.getElementById('setlist-list').innerHTML = '';
-      document.getElementById('setlist-modal').classList.add('open');
-      return;
-    }
-    const show = setlistData.shows.find(s => s.id === id);
-    const songHistory = buildSongHistory();
-    document.getElementById('setlist-title').textContent = show.venue;
-    document.getElementById('setlist-date').textContent =
-      show.date.month + ' ' + show.date.day + ', ' + show.date.year + ' — ' + show.city;
-    document.getElementById('setlist-list').innerHTML = show.setlist
-      .map((song, i) => {
-        const key = song.title.toLowerCase().trim();
-        const count = songHistory[key] ? songHistory[key].plays.length : 1;
-        return `<div class="setlist-row">
-          <span class="setlist-num">${i + 1}.</span>
-          <span class="setlist-song">
-            <a class="song-link" href="#" onclick="showSongHistory('${song.title.replace(/'/g,"\\'")}');return false;">${song.title}</a>
-          </span>
-
-        </div>`;
-      })
-      .join('');
-    document.getElementById('setlist-modal').classList.add('open');
-  }
-
-  function showSongHistory(title) {
-    const songHistory = buildSongHistory();
-    const key = title.toLowerCase().trim();
-    const entry = songHistory[key];
-    const count = entry ? entry.plays.length : 0;
-    document.getElementById('song-history-title').textContent = title;
-    document.getElementById('song-history-count').textContent = 'Times Played: ' + count;
-    document.getElementById('song-history-list').innerHTML = entry
-      ? entry.plays.map(p => `
-          <div class="history-row">
-            <span class="history-date">${p.month} ${p.day}, ${p.year}</span>
-            <span class="history-venue">${p.venue} — ${p.city}</span>
-          </div>`).join('')
-      : '<p style="text-align:center;opacity:0.5;font-family:Special Elite,cursive;letter-spacing:2px;font-size:0.8rem;margin-top:1rem;">No history found.</p>';
-    document.getElementById('setlist-modal').classList.remove('open');
-    document.getElementById('song-history-modal').classList.add('open');
-  }
-
-
-</script>
+<script src="/script.js"></script>
 
 <!-- Setlist Modal -->
 <div id="setlist-modal">
