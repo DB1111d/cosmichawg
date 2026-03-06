@@ -1,7 +1,9 @@
 import json
 import re
+from datetime import date
 
-LINEUPS_FILE = "lineuppath"
+SHOWS_FILE   = "/Users/john/Downloads/cosmichawg/shows.json"
+LINEUPS_FILE = "/Users/john/Downloads/cosmichawg/lineups.json"
 
 MONTH_MAP = {
     "01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr",
@@ -9,9 +11,9 @@ MONTH_MAP = {
     "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"
 }
 
-def make_id(venue, date):
+def make_id(venue, date_str):
     slug = re.sub(r'[^a-z0-9]+', '-', venue.lower()).strip('-')
-    return f"{slug}-{date}"
+    return f"{slug}-{date_str}"
 
 def parse_date(date_str):
     year, month, day = date_str.split("-")
@@ -29,25 +31,44 @@ def required_input(prompt):
             continue
         return value
 
-def valid_date_input():
+def pick_entry(entries, label_fn):
+    for i, e in enumerate(entries):
+        print(f"  {i+1}. {label_fn(e)}")
     while True:
-        value = input("Date (YYYY-MM-DD): ").strip()
-        if not value:
-            print("  ⚠️  Date is required!")
+        choice = input(f"\nSelect entry (1-{len(entries)}): ").strip()
+        if not choice.isdigit() or not (1 <= int(choice) <= len(entries)):
+            print(f"  ⚠️  Please enter a number between 1 and {len(entries)}")
             continue
-        if not re.match(r'^\d{4}-\d{2}-\d{2}$', value):
-            print("  ⚠️  Date must be in YYYY-MM-DD format (e.g. 2026-03-15)")
-            continue
-        return value
+        return int(choice) - 1
 
 def add_lineup():
-    print("\n--- Add Lineup ---")
-    date  = valid_date_input()
-    venue = required_input("Venue name: ")
-    city  = required_input("City, ST: ")
+    with open(SHOWS_FILE, "r") as f:
+        shows = json.load(f)
 
-    show_id    = make_id(venue, date)
-    date_parts = parse_date(date)
+    with open(LINEUPS_FILE, "r") as f:
+        lineups = json.load(f)
+
+    today = date.today().isoformat()
+    existing_ids = {s["id"] for s in lineups["shows"]}
+
+    eligible = [
+        s for s in shows
+        if s["date"] < today and make_id(s["venue"], s["date"]) not in existing_ids
+    ]
+
+    if not eligible:
+        print("\n✅ No shows missing a lineup.")
+        return
+
+    print("\n--- Add Lineup ---")
+    print("Shows missing a lineup:\n")
+    idx = pick_entry(eligible, lambda s: f"{s['date']} - {s['venue']} - {s['city']}")
+    show = eligible[idx]
+
+    show_id    = make_id(show["venue"], show["date"])
+    date_parts = parse_date(show["date"])
+
+    print(f"\nAdding lineup for: {show['venue']} — {show['date']} — {show['city']}")
 
     members = []
     print("\nEnter lineup members one by one. Press Enter with no name when done (minimum 1 required).")
@@ -68,13 +89,10 @@ def add_lineup():
             break
         members.append({"name": name, "role": role})
 
-    with open(LINEUPS_FILE, "r") as f:
-        lineups = json.load(f)
-
     lineups["shows"].insert(0, {
         "id": show_id,
-        "venue": venue,
-        "city": city,
+        "venue": show["venue"],
+        "city": show["city"],
         "date": date_parts,
         "lineup": members
     })
