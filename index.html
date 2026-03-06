@@ -140,7 +140,7 @@
   .tour-list { display: flex; flex-direction: column; }
   .tour-item { display: grid; grid-template-columns: 80px 1fr; align-items: center; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(59,31,10,0.15); }
   @media (min-width: 640px) { .tour-item { grid-template-columns: 80px 1fr auto; } }
-  .tour-item:first-child { border-top: 1px solid rgba(59,31,10,0.15); }
+
   .tour-date-box { text-align: center; background: var(--dark); padding: 0.8rem; }
   .tour-month { font-family: 'Special Elite', cursive; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--mustard); }
   .tour-day { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--cream); line-height: 1; }
@@ -185,6 +185,9 @@
   .page-btn { font-family: 'Special Elite', cursive; font-size: 0.8rem; letter-spacing: 2px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: transparent; border: 2px solid var(--brown); color: var(--brown); cursor: pointer; transition: all 0.2s; }
   .page-btn:hover { background: var(--brown); color: var(--cream); }
   .page-btn.active { background: var(--rust); border-color: var(--rust); color: var(--cream); }
+  .page-btn.page-arrow { width: auto; height: auto; border: none; background: transparent; font-size: 1.4rem; font-weight: 700; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0; color: var(--rust); padding: 0 0.3rem; }
+  .page-btn.page-arrow:hover { background: transparent; color: var(--brown); }
+  .page-btn.page-arrow-disabled { color: rgba(59,31,10,0.25); cursor: default; }
 
   @media (max-width: 768px) {
     /* About image */
@@ -415,11 +418,13 @@
         <button class="tab-btn" onclick="switchTab('previous',this)"><span>Previous</span></button>
       </div></div>
       <div id="panel-upcoming" class="shows-panel active">
+        <div id="pagination-upcoming-top" class="pagination"></div>
         <div id="list-upcoming" class="tour-list upcoming-list"></div>
         <p id="no-upcoming" class="no-shows" style="display:none;">&#10022; No Upcoming Shows &#10022;</p>
         <div id="pagination-upcoming" class="pagination"></div>
       </div>
       <div id="panel-previous" class="shows-panel">
+        <div id="pagination-previous-top" class="pagination"></div>
         <div id="list-previous" class="tour-list"></div>
         <p id="no-previous" class="no-shows" style="display:none;">&#10022; No Previous Shows &#10022;</p>
         <div id="pagination-previous" class="pagination"></div>

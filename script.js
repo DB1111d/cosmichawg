@@ -96,49 +96,61 @@ function renderPage(panelId, items) {
   });
 
   const paginationEl = document.getElementById('pagination-' + panelId);
-  if (!paginationEl) return;
-  paginationEl.innerHTML = '';
-  if (totalPages <= 1) return;
+  const paginationTopEl = document.getElementById('pagination-' + panelId + '-top');
 
-  // ── Sliding window pagination: max 3 page numbers + arrows ──
-  const WINDOW = 3;
+  function buildPagination(container) {
+    if (!container) return;
+    container.innerHTML = '';
+    if (totalPages <= 1) return;
 
-  // Calculate the window start so the current page is centered when possible
-  let winStart = Math.max(1, page - Math.floor(WINDOW / 2));
-  let winEnd = winStart + WINDOW - 1;
-  if (winEnd > totalPages) {
-    winEnd = totalPages;
-    winStart = Math.max(1, winEnd - WINDOW + 1);
+    const WINDOW = 3;
+    let winStart = Math.max(1, page - Math.floor(WINDOW / 2));
+    let winEnd = winStart + WINDOW - 1;
+    if (winEnd > totalPages) {
+      winEnd = totalPages;
+      winStart = Math.max(1, winEnd - WINDOW + 1);
+    }
+
+    function makeBtn(label, targetPage, isActive) {
+      const btn = document.createElement('button');
+      btn.className = 'page-btn' + (isActive ? ' active' : '');
+      btn.textContent = label;
+      btn.addEventListener('click', () => {
+        paginationState[panelId] = targetPage;
+        renderPage(panelId, items);
+      });
+      return btn;
+    }
+
+    if (page > 1) {
+      const btn = makeBtn('<', page - 1, false);
+      btn.classList.add('page-arrow');
+      container.appendChild(btn);
+    } else {
+      const btn = document.createElement('button');
+      btn.className = 'page-btn page-arrow page-arrow-disabled';
+      btn.textContent = '<';
+      btn.disabled = true;
+      container.appendChild(btn);
+    }
+    for (let i = winStart; i <= winEnd; i++) {
+      container.appendChild(makeBtn(i, i, i === page));
+    }
+    if (page < totalPages) {
+      const btn = makeBtn('>', page + 1, false);
+      btn.classList.add('page-arrow');
+      container.appendChild(btn);
+    } else {
+      const btn = document.createElement('button');
+      btn.className = 'page-btn page-arrow page-arrow-disabled';
+      btn.textContent = '>';
+      btn.disabled = true;
+      container.appendChild(btn);
+    }
   }
 
-  function makeBtn(label, targetPage, isActive) {
-    const btn = document.createElement('button');
-    btn.className = 'page-btn' + (isActive ? ' active' : '');
-    btn.textContent = label;
-    btn.addEventListener('click', () => {
-      paginationState[panelId] = targetPage;
-      renderPage(panelId, items);
-      const tabsEl = document.getElementById('shows-tabs-anchor');
-      const offset = tabsEl.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top: offset, behavior: 'smooth' });
-    });
-    return btn;
-  }
-
-  // Left arrow
-  if (page > 1) {
-    paginationEl.appendChild(makeBtn('‹', page - 1, false));
-  }
-
-  // Page number buttons (sliding window)
-  for (let i = winStart; i <= winEnd; i++) {
-    paginationEl.appendChild(makeBtn(i, i, i === page));
-  }
-
-  // Right arrow
-  if (page < totalPages) {
-    paginationEl.appendChild(makeBtn('›', page + 1, false));
-  }
+  buildPagination(paginationEl);
+  buildPagination(paginationTopEl);
 }
 
 // ── Reveal on scroll ──
