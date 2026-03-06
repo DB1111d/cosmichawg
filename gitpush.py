@@ -69,8 +69,8 @@ def gitpush():
         check=True
     )
 
-    # ── Push ──
-    subprocess.run(['git', 'push'], check=True)
+    # ── Push to main ──
+    subprocess.run(['git', 'push', 'origin', 'main'], check=True)
 
     print("\n✦ Pushed to GitHub successfully.\n")
 
