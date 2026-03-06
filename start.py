@@ -8,9 +8,9 @@ import sys
 
 # ─── CONFIGURATION ───────────────────────────────────────────────
 PORT = 8000
-PROJECT_FOLDER = "where the index is"
-CHROMEDRIVER_PATH = "chromedriver path"
-CHROME_BINARY = "crhome binary"
+PROJECT_FOLDER = os.path.join(os.path.expanduser("~"), "Downloads", "cosmichawg")
+CHROMEDRIVER_PATH = os.path.join(os.path.expanduser("~"), ".wdm", "drivers", "chromedriver", "chromedriver")
+CHROME_BINARY = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 # ─────────────────────────────────────────────────────────────────
 
 def start_server(folder, port):
