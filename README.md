@@ -16,7 +16,7 @@ Creates a new entry to the shows.json
 
 Creates a new entry to the lineups.json
 
-### addhsetlist.py
+### addsetlist.py
 
 Creates a new entry to the setlists.json
 
