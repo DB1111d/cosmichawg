@@ -4,6 +4,10 @@
 
 This will clone whatever repo you've already cloned before to your downloads folder.
 
+### gitclonebranch.py
+
+This will clone whatever branch of a repo you've already cloned before to your downloads folder.
+
 ### start.py
 
 Automates local host initiation and opens your index.html.
