@@ -19,3 +19,11 @@ Creates a new entry to the lineups.json
 ### addhsetlist.py
 
 Creates a new entry to the setlists.json
+
+### gitpush.py
+
+Commits new edits to your main repo.
+
+### gitpush.py
+
+Commits new edits to a branch of your repo.
