@@ -11,3 +11,11 @@ Automates local host initiation and opens your index.html.
 ### addhshow.py
 
 Creates a new entry to the shows.json
+
+### addlineup.py
+
+Creates a new entry to the lineups.json
+
+### addhsetlist.py
+
+Creates a new entry to the setlists.json
