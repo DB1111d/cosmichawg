@@ -8,7 +8,7 @@ This will clone whatever repo you've already cloned before to your downloads fol
 
 Automates local host initiation and opens your index.html.
 
-### addhshow.py
+### addshow.py
 
 Creates a new entry to the shows.json
 
