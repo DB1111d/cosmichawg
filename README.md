@@ -20,6 +20,10 @@ Creates a new entry to the lineups.json
 
 Creates a new entry to the setlists.json
 
+### editentry.py
+
+Allows you to edit any existing values in shows.json, lineups.json, or setlists.json.
+
 ### gitpush.py
 
 Commits new edits to your main repo.
