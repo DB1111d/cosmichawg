@@ -24,6 +24,6 @@ Creates a new entry to the setlists.json
 
 Commits new edits to your main repo.
 
-### gitpush.py
+### gitpushbranch.py
 
 Commits new edits to a branch of your repo.
