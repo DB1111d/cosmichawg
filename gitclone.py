@@ -2,7 +2,7 @@ import subprocess
 import os
 
 # ── CONFIG ── Fill in before running ──
-REPO_URL = ""https://github.com/user/repo.git""
+REPO_URL = "https://github.com/user/repo.git"
 # ─────────────────────────────────────
 
 def gitclone():
