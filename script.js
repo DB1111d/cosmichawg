@@ -289,3 +289,50 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => renderShows(data))
     .catch(e => console.error('Could not load shows.json', e));
 });
+
+// ── Contact Form ──
+(function () {
+  const API_URL = 'https://xh66q28v71.execute-api.us-east-2.amazonaws.com/contact';
+  const form   = document.getElementById('contactForm');
+  const btn    = document.getElementById('cf-submit');
+  const status = document.getElementById('cf-status');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = '\u2726 Sending\u2026 \u2726';
+    status.textContent = '';
+    status.className = '';
+
+    const payload = {
+      source:  window.location.hostname,
+      name:    document.getElementById('cf-name').value.trim(),
+      email:   document.getElementById('cf-email').value.trim(),
+      subject: document.getElementById('cf-subject').value.trim(),
+      message: document.getElementById('cf-message').value.trim(),
+    };
+
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (res.ok) {
+        status.textContent = '\u2726 Message sent! We\'ll be in touch. \u2726';
+        status.className = 'success';
+        form.reset();
+      } else {
+        throw new Error('Server error ' + res.status);
+      }
+    } catch (err) {
+      status.textContent = '\u2726 Something went wrong. Please try again. \u2726';
+      status.className = 'error';
+      console.error(err);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '\u2726 Send It \u2726';
+    }
+  });
+})();
