@@ -358,6 +358,49 @@
     }
   }
 </style>
+
+  <style>
+    /* ── New Contact Header ──────────────────────────────────── */
+    .cf-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin: 0 0 0.5em;
+      line-height: 1.05;
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .cf-title-line {
+      font-weight: 900;
+      font-size: clamp(2rem, 5.5vw, 4rem);
+      color: #f0e6d0;
+      letter-spacing: -0.01em;
+      display: block;
+    }
+    .cf-title-amp {
+      font-weight: 900;
+      font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+      color: #f0e6d0;
+      display: block;
+      line-height: 1.1;
+    }
+    .cf-divider {
+      width: 100px;
+      height: 3px;
+      background: #c9a227;
+      margin: 0.7em auto 1.1em;
+      border-radius: 2px;
+    }
+    .cf-subtitle {
+      color: rgba(245,237,214,0.5);
+      font-size: 0.9rem;
+      font-family: 'Special Elite', cursive;
+      letter-spacing: 1px;
+      margin-bottom: 3rem;
+    }
+    #cf-status.success { color: #7ecb8f; }
+    #cf-status.error   { color: #e02020; }
+  </style>
 </head>
 <body>
 <nav>
@@ -451,18 +494,26 @@
   <div class="contact-inner">
     <div class="reveal">
 
-      <h2 id="contact-form" class="section-title" style="font-size:clamp(2.2rem,5vw,3.8rem); scroll-margin-top: 80px;">Booking<br><span style="font-size:1.1em;">&amp;</span><br>Contact</h2>
-      <div class="divider"></div>
-      <p style="font-family:'Special Elite',cursive;letter-spacing:1px;color:rgba(245,237,214,0.5);margin-bottom:3rem;font-size:0.9rem;">For bookings, press inquiries, or just to say hey -- drop us a line.</p>
-    <form class="contact-form reveal" action="https://formspree.io/f/xzdalnrz" method="POST">
+      <!-- New header matching screenshot -->
+      <h2 id="contact-form" class="cf-title" style="scroll-margin-top: 80px;">
+        <span class="cf-title-line">Booking</span>
+        <span class="cf-title-amp">&amp;</span>
+        <span class="cf-title-line">Contact</span>
+      </h2>
+      <div class="cf-divider"></div>
+      <p class="cf-subtitle">For bookings, press inquiries, or just to say hey &mdash; drop us a line.</p>
+
+    <!-- New Lambda-backed form -->
+    <form id="contactForm" class="contact-form reveal">
       <div class="form-row">
-        <input class="form-input" type="text" name="name" placeholder="Your Name" required>
-        <input class="form-input" type="email" name="email" placeholder="Email Address" required>
+        <input class="form-input" type="text"  name="name"    id="cf-name"    placeholder="Name"    required>
+        <input class="form-input" type="email" name="email"   id="cf-email"   placeholder="Email"   required>
       </div>
-      <input class="form-input" type="text" name="subject" placeholder="Subject (Booking / Press / General)">
-      <textarea class="form-textarea" name="message" placeholder="Your Message..." required></textarea>
-      <button class="form-submit" type="submit" style="display:flex;align-items:center;justify-content:center;gap:0.6rem;">&#10022; Send It &#10022;</button>
+      <input class="form-input" type="text" name="subject" id="cf-subject" placeholder="Subject" required>
+      <textarea class="form-textarea" name="message" id="cf-message" placeholder="Your Message..." required></textarea>
+      <button class="form-submit" type="submit" id="cf-submit">&#10022; Send It &#10022;</button>
     </form>
+    <p id="cf-status" aria-live="polite" style="font-family:'Courier New',monospace;font-size:0.88rem;min-height:1.4em;margin-top:1rem;"></p>
     <div class="social-links reveal">
       <a href="https://www.instagram.com/cosmichawg/" class="social-link" target="_blank" aria-label="Instagram">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -674,5 +725,53 @@
 </style>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d6f07eaa497743c5af76fa0f55330ebb"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <script>
+    (function () {
+      const API_URL = 'https://xh66q28v71.execute-api.us-east-2.amazonaws.com/contact';
+      const form   = document.getElementById('contactForm');
+      const btn    = document.getElementById('cf-submit');
+      const status = document.getElementById('cf-status');
+      if (!form) return;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = '\u2726 Sending\u2026 \u2726';
+        status.textContent = '';
+        status.className = '';
+
+        const payload = {
+          source:  window.location.hostname,
+          name:    document.getElementById('cf-name').value.trim(),
+          email:   document.getElementById('cf-email').value.trim(),
+          subject: document.getElementById('cf-subject').value.trim(),
+          message: document.getElementById('cf-message').value.trim(),
+        };
+
+        try {
+          const res = await fetch(API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          if (res.ok) {
+            status.textContent = '\u2726 Message sent! We\'ll be in touch. \u2726';
+            status.className = 'success';
+            form.reset();
+          } else {
+            throw new Error('Server error ' + res.status);
+          }
+        } catch (err) {
+          status.textContent = '\u2726 Something went wrong. Please try again. \u2726';
+          status.className = 'error';
+          console.error(err);
+        } finally {
+          btn.disabled = false;
+          btn.textContent = '\u2726 Send It \u2726';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
