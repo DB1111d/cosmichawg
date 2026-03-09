@@ -35,7 +35,7 @@ BASE_URL          = "http://localhost:8000"
 PORT              = 8000
 HEADLESS          = True
 SHOWS_PER_PAGE    = 4
-CHROMEDRIVER_PATH = "/usr/local/bin/chromedriver"
+CHROMEDRIVER_PATH = "/usr/bin/chromedriver"
 CHROME_BINARY     = "/usr/bin/google-chrome"
 
 # ── Generate test data ───────────────────────────────────────────────────────
