@@ -83,8 +83,6 @@ def auth_check():
 # ── Serve admin page from GitHub ──
 @app.route('/admin')
 def admin():
-    content, _ = gh_get('admin.html')
-    # gh_get parses as JSON, so we need raw for HTML
     url = f'https://api.github.com/repos/{GITHUB_REPO}/contents/admin.html?ref={GITHUB_BRANCH}'
     r = requests.get(url, headers=gh_headers())
     raw = base64.b64decode(r.json()['content']).decode('utf-8')
