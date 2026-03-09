@@ -1,30 +1,359 @@
 [
   {
-    "date": "2025-11-28",
+    "date": "2027-01-01",
+    "venue": "Carolina Ale House",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-12-27",
+    "venue": "The Skullcandy Stage",
+    "city": "Spartanburg, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-12-11",
+    "venue": "Roost Chicken + Beer",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-11-26",
+    "venue": "The Grey Eagle",
+    "city": "Asheville, NC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-11-12",
+    "venue": "The Radio Room",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-11-07",
+    "venue": "The Handlebar",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-10-22",
+    "venue": "The Southern Craft Creamery",
+    "city": "Greer, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-10-14",
+    "venue": "Portman Shoals Park",
+    "city": "Belton, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-10-06",
+    "venue": "Thomas Street Tavern",
+    "city": "Charlotte, NC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-09-22",
+    "venue": "Wild Wing Cafe",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-09-13",
+    "venue": "Hub City Brewing Co.",
+    "city": "Spartanburg, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-09-02",
+    "venue": "Asheville Music Hall",
+    "city": "Asheville, NC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-08-19",
+    "venue": "TD Saturday Market",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-08-03",
+    "venue": "Trailblazer Park",
+    "city": "Greer, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-07-22",
+    "venue": "Isis Music Hall",
+    "city": "Asheville, NC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-07-15",
+    "venue": "The Rusty Rudder",
+    "city": "Anderson, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-07-08",
+    "venue": "Larkins on the River",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-06-22",
+    "venue": "Warehouse Theatre",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-06-04",
+    "venue": "Drayton Mills Marketplace",
+    "city": "Spartanburg, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-05-29",
+    "venue": "Greenville County Museum",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-05-12",
     "venue": "Poe Mill Music Hall",
     "city": "Greenville, SC",
-    "lineupId": "poemill-2025-11-28",
-    "setlistId": "poemill-2025-11-28"
+    "lineupId": null,
+    "setlistId": null
   },
   {
-    "date": "2025-10-29",
-    "venue": "Corey James Memorial Good Time Benefit",
+    "date": "2026-05-07",
+    "venue": "Falls Park Amphitheater",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-04-20",
+    "venue": "The Bohemian",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-04-04",
+    "venue": "Fluor Field at the West End",
+    "city": "Greenville, SC",
+    "lineupId": null,
+    "setlistId": null
+  },
+  {
+    "date": "2026-03-24",
+    "venue": "The Spinning Jenny",
     "city": "Greer, SC",
-    "lineupId": "corey-james-memorial-good-time-benefit-2025-10-29",
-    "setlistId": "corey-james-memorial-good-time-benefit-2025-10-29"
+    "lineupId": null,
+    "setlistId": null
   },
   {
-    "date": "2025-10-04",
+    "date": "2026-03-07",
+    "venue": "Empty Show Test Venue",
+    "city": "Greenville, SC",
+    "lineupId": "empty-show-test-venue-2026-03-07",
+    "setlistId": "empty-show-test-venue-2026-03-07"
+  },
+  {
+    "date": "2026-03-04",
+    "venue": "Portman Shoals Park",
+    "city": "Belton, SC",
+    "lineupId": "portman-shoals-park-2026-03-04",
+    "setlistId": "portman-shoals-park-2026-03-04"
+  },
+  {
+    "date": "2026-02-22",
+    "venue": "Warehouse Theatre",
+    "city": "Greenville, SC",
+    "lineupId": "warehouse-theatre-2026-02-22",
+    "setlistId": "warehouse-theatre-2026-02-22"
+  },
+  {
+    "date": "2026-02-15",
+    "venue": "Larkins on the River",
+    "city": "Greenville, SC",
+    "lineupId": "larkins-on-the-river-2026-02-15",
+    "setlistId": "larkins-on-the-river-2026-02-15"
+  },
+  {
+    "date": "2026-02-09",
+    "venue": "Drayton Mills Marketplace",
+    "city": "Spartanburg, SC",
+    "lineupId": "drayton-mills-marketplace-2026-02-09",
+    "setlistId": "drayton-mills-marketplace-2026-02-09"
+  },
+  {
+    "date": "2026-01-31",
+    "venue": "Isis Music Hall",
+    "city": "Asheville, NC",
+    "lineupId": "isis-music-hall-2026-01-31",
+    "setlistId": "isis-music-hall-2026-01-31"
+  },
+  {
+    "date": "2026-01-13",
+    "venue": "Falls Park Amphitheater",
+    "city": "Greenville, SC",
+    "lineupId": "falls-park-amphitheater-2026-01-13",
+    "setlistId": "falls-park-amphitheater-2026-01-13"
+  },
+  {
+    "date": "2025-12-30",
+    "venue": "The Bohemian",
+    "city": "Greenville, SC",
+    "lineupId": "the-bohemian-2025-12-30",
+    "setlistId": "the-bohemian-2025-12-30"
+  },
+  {
+    "date": "2025-12-24",
+    "venue": "Wild Wing Cafe",
+    "city": "Greenville, SC",
+    "lineupId": "wild-wing-cafe-2025-12-24",
+    "setlistId": "wild-wing-cafe-2025-12-24"
+  },
+  {
+    "date": "2025-12-14",
+    "venue": "The Southern Craft Creamery",
+    "city": "Greer, SC",
+    "lineupId": "the-southern-craft-creamery-2025-12-14",
+    "setlistId": "the-southern-craft-creamery-2025-12-14"
+  },
+  {
+    "date": "2025-12-09",
+    "venue": "The Grey Eagle",
+    "city": "Asheville, NC",
+    "lineupId": "the-grey-eagle-2025-12-09",
+    "setlistId": "the-grey-eagle-2025-12-09"
+  },
+  {
+    "date": "2025-12-02",
+    "venue": "Hub City Brewing Co.",
+    "city": "Spartanburg, SC",
+    "lineupId": "hub-city-brewing-co-2025-12-02",
+    "setlistId": "hub-city-brewing-co-2025-12-02"
+  },
+  {
+    "date": "2025-11-18",
+    "venue": "Carolina Ale House",
+    "city": "Greenville, SC",
+    "lineupId": "carolina-ale-house-2025-11-18",
+    "setlistId": "carolina-ale-house-2025-11-18"
+  },
+  {
+    "date": "2025-11-11",
+    "venue": "Thomas Street Tavern",
+    "city": "Charlotte, NC",
+    "lineupId": "thomas-street-tavern-2025-11-11",
+    "setlistId": "thomas-street-tavern-2025-11-11"
+  },
+  {
+    "date": "2025-11-01",
+    "venue": "Asheville Music Hall",
+    "city": "Asheville, NC",
+    "lineupId": "asheville-music-hall-2025-11-01",
+    "setlistId": "asheville-music-hall-2025-11-01"
+  },
+  {
+    "date": "2025-10-27",
+    "venue": "The Handlebar",
+    "city": "Greenville, SC",
+    "lineupId": "the-handlebar-2025-10-27",
+    "setlistId": "the-handlebar-2025-10-27"
+  },
+  {
+    "date": "2025-10-16",
     "venue": "Artistry Workshops & Gallery",
     "city": "Greenville, SC",
-    "lineupId": "artistry-2025-10-04",
-    "setlistId": "artistry-2025-10-04"
+    "lineupId": "artistry-workshops-gallery-2025-10-16",
+    "setlistId": "artistry-workshops-gallery-2025-10-16"
   },
   {
-    "date": "2025-09-14",
+    "date": "2025-10-07",
     "venue": "Smileys on the Roxx",
     "city": "Greenville, SC",
-    "lineupId": "smileys-2025-09-14",
-    "setlistId": "smileys-2025-09-14"
+    "lineupId": "smileys-on-the-roxx-2025-10-07",
+    "setlistId": "smileys-on-the-roxx-2025-10-07"
+  },
+  {
+    "date": "2025-09-28",
+    "venue": "TD Saturday Market",
+    "city": "Greenville, SC",
+    "lineupId": "td-saturday-market-2025-09-28",
+    "setlistId": "td-saturday-market-2025-09-28"
+  },
+  {
+    "date": "2025-09-21",
+    "venue": "The Rusty Rudder",
+    "city": "Anderson, SC",
+    "lineupId": "the-rusty-rudder-2025-09-21",
+    "setlistId": "the-rusty-rudder-2025-09-21"
+  },
+  {
+    "date": "2025-09-13",
+    "venue": "Trailblazer Park",
+    "city": "Greer, SC",
+    "lineupId": "trailblazer-park-2025-09-13",
+    "setlistId": "trailblazer-park-2025-09-13"
+  },
+  {
+    "date": "2025-09-05",
+    "venue": "The Skullcandy Stage",
+    "city": "Spartanburg, SC",
+    "lineupId": "the-skullcandy-stage-2025-09-05",
+    "setlistId": "the-skullcandy-stage-2025-09-05"
+  },
+  {
+    "date": "2025-08-30",
+    "venue": "The Spinning Jenny",
+    "city": "Greer, SC",
+    "lineupId": "the-spinning-jenny-2025-08-30",
+    "setlistId": "the-spinning-jenny-2025-08-30"
+  },
+  {
+    "date": "2025-08-20",
+    "venue": "Poe Mill Music Hall",
+    "city": "Greenville, SC",
+    "lineupId": "poe-mill-music-hall-2025-08-20",
+    "setlistId": "poe-mill-music-hall-2025-08-20"
+  },
+  {
+    "date": "2025-08-15",
+    "venue": "The Radio Room",
+    "city": "Greenville, SC",
+    "lineupId": "the-radio-room-2025-08-15",
+    "setlistId": "the-radio-room-2025-08-15"
+  },
+  {
+    "date": "2025-08-02",
+    "venue": "Roost Chicken + Beer",
+    "city": "Greenville, SC",
+    "lineupId": "roost-chicken-beer-2025-08-02",
+    "setlistId": "roost-chicken-beer-2025-08-02"
   }
 ]

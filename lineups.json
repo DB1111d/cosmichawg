@@ -1,57 +1,1559 @@
 {
   "shows": [
     {
-      "id": "poemill-2025-11-28",
-      "venue": "Poe Mill Music Hall",
+      "id": "portman-shoals-park-2026-03-04",
+      "venue": "Portman Shoals Park",
+      "city": "Belton, SC",
+      "date": {
+        "month": "Mar",
+        "day": "4",
+        "year": "2026"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Keisha M.",
+          "role": "Violin"
+        },
+        {
+          "name": "Vera O.",
+          "role": "Lap Steel"
+        },
+        {
+          "name": "Priya S.",
+          "role": "Congas"
+        },
+        {
+          "name": "Bart L.",
+          "role": "Baritone Guitar"
+        },
+        {
+          "name": "Walt H.",
+          "role": "Trumpet"
+        },
+        {
+          "name": "Tanya R.",
+          "role": "Keyboard"
+        },
+        {
+          "name": "Dez W.",
+          "role": "Steel Guitar"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Tambourine"
+        },
+        {
+          "name": "Leo V.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Iris F.",
+          "role": "Flute"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Trombone"
+        },
+        {
+          "name": "Marcus D.",
+          "role": "Mandolin"
+        },
+        {
+          "name": "Fiona C.",
+          "role": "Percussion"
+        },
+        {
+          "name": "Rhonda J.",
+          "role": "Harmonica"
+        },
+        {
+          "name": "Gus P.",
+          "role": "Upright Bass"
+        }
+      ]
+    },
+    {
+      "id": "warehouse-theatre-2026-02-22",
+      "venue": "Warehouse Theatre",
       "city": "Greenville, SC",
-      "date": { "month": "Nov", "day": "28", "year": "2025" },
+      "date": {
+        "month": "Feb",
+        "day": "22",
+        "year": "2026"
+      },
       "lineup": [
-        { "name": "Eddie S.", "role": "Vocals" },
-        { "name": "Robbie B.", "role": "Keyboard / Vocals" },
-        { "name": "Dan B.", "role": "Guitar / Vocals" },
-        { "name": "Jeff F.", "role": "Guitar" },
-        { "name": "Chris K.", "role": "Bass" },
-        { "name": "Skip", "role": "Percussion" },
-        { "name": "Ryan T.", "role": "Drums" }
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Simone K.",
+          "role": "Trombone"
+        },
+        {
+          "name": "Gus P.",
+          "role": "Trumpet"
+        },
+        {
+          "name": "Fiona C.",
+          "role": "Flute"
+        },
+        {
+          "name": "Leo V.",
+          "role": "Baritone Guitar"
+        },
+        {
+          "name": "Marcus D.",
+          "role": "Violin"
+        },
+        {
+          "name": "Priya S.",
+          "role": "Keyboard"
+        },
+        {
+          "name": "Bart L.",
+          "role": "Congas"
+        },
+        {
+          "name": "Andr\u00e9 T.",
+          "role": "Harmonica"
+        },
+        {
+          "name": "Walt H.",
+          "role": "Tambourine"
+        },
+        {
+          "name": "Iris F.",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Mandolin"
+        },
+        {
+          "name": "Vera O.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Upright Bass"
+        }
       ]
     },
     {
-      "id": "corey-james-2025-10-25",
-      "venue": "Corey James Memorial Good Time Benefit",
+      "id": "larkins-on-the-river-2026-02-15",
+      "venue": "Larkins on the River",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Feb",
+        "day": "15",
+        "year": "2026"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        }
+      ]
+    },
+    {
+      "id": "drayton-mills-marketplace-2026-02-09",
+      "venue": "Drayton Mills Marketplace",
+      "city": "Spartanburg, SC",
+      "date": {
+        "month": "Feb",
+        "day": "9",
+        "year": "2026"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        }
+      ]
+    },
+    {
+      "id": "isis-music-hall-2026-01-31",
+      "venue": "Isis Music Hall",
+      "city": "Asheville, NC",
+      "date": {
+        "month": "Jan",
+        "day": "31",
+        "year": "2026"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        }
+      ]
+    },
+    {
+      "id": "falls-park-amphitheater-2026-01-13",
+      "venue": "Falls Park Amphitheater",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Jan",
+        "day": "13",
+        "year": "2026"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        }
+      ]
+    },
+    {
+      "id": "the-bohemian-2025-12-30",
+      "venue": "The Bohemian",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Dec",
+        "day": "30",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        }
+      ]
+    },
+    {
+      "id": "wild-wing-cafe-2025-12-24",
+      "venue": "Wild Wing Cafe",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Dec",
+        "day": "24",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        }
+      ]
+    },
+    {
+      "id": "the-southern-craft-creamery-2025-12-14",
+      "venue": "The Southern Craft Creamery",
       "city": "Greer, SC",
-      "date": { "month": "Oct", "day": "25", "year": "2025" },
+      "date": {
+        "month": "Dec",
+        "day": "14",
+        "year": "2025"
+      },
       "lineup": [
-        { "name": "Robbie B.", "role": "Keyboards / Vocals" },
-        { "name": "Dan B.", "role": "Guitar / Vocals" },
-        { "name": "Jeff F.", "role": "Guitar" },
-        { "name": "Chris K.", "role": "Bass" },
-        { "name": "Nelson R.", "role": "Saxophone" },
-        { "name": "Ryan T.", "role": "Drums" }
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Tanya R.",
+          "role": "Mandolin"
+        },
+        {
+          "name": "Bart L.",
+          "role": "Baritone Guitar"
+        },
+        {
+          "name": "Andr\u00e9 T.",
+          "role": "Backing Vocals"
+        },
+        {
+          "name": "Fiona C.",
+          "role": "Steel Guitar"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Tambourine"
+        },
+        {
+          "name": "Walt H.",
+          "role": "Congas"
+        },
+        {
+          "name": "Vera O.",
+          "role": "Lap Steel"
+        },
+        {
+          "name": "Gus P.",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "name": "Priya S.",
+          "role": "Harmonica"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Flute"
+        },
+        {
+          "name": "Simone K.",
+          "role": "Violin"
+        },
+        {
+          "name": "Leo V.",
+          "role": "Upright Bass"
+        },
+        {
+          "name": "Keisha M.",
+          "role": "Saxophone"
+        }
       ]
     },
     {
-      "id": "artistry-2025-10-04",
+      "id": "the-grey-eagle-2025-12-09",
+      "venue": "The Grey Eagle",
+      "city": "Asheville, NC",
+      "date": {
+        "month": "Dec",
+        "day": "9",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Marcus D.",
+          "role": "Steel Guitar"
+        },
+        {
+          "name": "Rhonda J.",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "name": "Simone K.",
+          "role": "Mandolin"
+        },
+        {
+          "name": "Keisha M.",
+          "role": "Flute"
+        },
+        {
+          "name": "Dez W.",
+          "role": "Trumpet"
+        },
+        {
+          "name": "Walt H.",
+          "role": "Baritone Guitar"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Keyboard"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Congas"
+        },
+        {
+          "name": "Bart L.",
+          "role": "Harmonica"
+        },
+        {
+          "name": "Leo V.",
+          "role": "Tambourine"
+        },
+        {
+          "name": "Iris F.",
+          "role": "Trombone"
+        },
+        {
+          "name": "Andr\u00e9 T.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Tanya R.",
+          "role": "Percussion"
+        },
+        {
+          "name": "Gus P.",
+          "role": "Upright Bass"
+        }
+      ]
+    },
+    {
+      "id": "hub-city-brewing-co-2025-12-02",
+      "venue": "Hub City Brewing Co.",
+      "city": "Spartanburg, SC",
+      "date": {
+        "month": "Dec",
+        "day": "2",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Leo V.",
+          "role": "Lap Steel"
+        },
+        {
+          "name": "Iris F.",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "name": "Marcus D.",
+          "role": "Upright Bass"
+        },
+        {
+          "name": "Vera O.",
+          "role": "Keyboard"
+        },
+        {
+          "name": "Bart L.",
+          "role": "Tambourine"
+        },
+        {
+          "name": "Fiona C.",
+          "role": "Trombone"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Backing Vocals"
+        },
+        {
+          "name": "Tanya R.",
+          "role": "Congas"
+        },
+        {
+          "name": "Gus P.",
+          "role": "Trumpet"
+        },
+        {
+          "name": "Dez W.",
+          "role": "Steel Guitar"
+        },
+        {
+          "name": "Simone K.",
+          "role": "Mandolin"
+        },
+        {
+          "name": "Rhonda J.",
+          "role": "Percussion"
+        },
+        {
+          "name": "Andr\u00e9 T.",
+          "role": "Baritone Guitar"
+        },
+        {
+          "name": "Priya S.",
+          "role": "Flute"
+        }
+      ]
+    },
+    {
+      "id": "carolina-ale-house-2025-11-18",
+      "venue": "Carolina Ale House",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Nov",
+        "day": "18",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        }
+      ]
+    },
+    {
+      "id": "thomas-street-tavern-2025-11-11",
+      "venue": "Thomas Street Tavern",
+      "city": "Charlotte, NC",
+      "date": {
+        "month": "Nov",
+        "day": "11",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Marcus D.",
+          "role": "Trombone"
+        },
+        {
+          "name": "Bart L.",
+          "role": "Keyboard"
+        },
+        {
+          "name": "Fiona C.",
+          "role": "Flute"
+        },
+        {
+          "name": "Iris F.",
+          "role": "Steel Guitar"
+        },
+        {
+          "name": "Leo V.",
+          "role": "Trumpet"
+        },
+        {
+          "name": "Walt H.",
+          "role": "Mandolin"
+        },
+        {
+          "name": "Rhonda J.",
+          "role": "Baritone Guitar"
+        },
+        {
+          "name": "Andr\u00e9 T.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Keisha M.",
+          "role": "Percussion"
+        },
+        {
+          "name": "Priya S.",
+          "role": "Harmonica"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Violin"
+        },
+        {
+          "name": "Vera O.",
+          "role": "Congas"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Upright Bass"
+        },
+        {
+          "name": "Gus P.",
+          "role": "Backing Vocals"
+        },
+        {
+          "name": "Simone K.",
+          "role": "Acoustic Guitar"
+        }
+      ]
+    },
+    {
+      "id": "asheville-music-hall-2025-11-01",
+      "venue": "Asheville Music Hall",
+      "city": "Asheville, NC",
+      "date": {
+        "month": "Nov",
+        "day": "1",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        }
+      ]
+    },
+    {
+      "id": "the-handlebar-2025-10-27",
+      "venue": "The Handlebar",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Oct",
+        "day": "27",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        }
+      ]
+    },
+    {
+      "id": "artistry-workshops-gallery-2025-10-16",
       "venue": "Artistry Workshops & Gallery",
       "city": "Greenville, SC",
-      "date": { "month": "Oct", "day": "04", "year": "2025" },
+      "date": {
+        "month": "Oct",
+        "day": "16",
+        "year": "2025"
+      },
       "lineup": [
-        { "name": "Dan B.", "role": "Guitar / Vocals" },
-        { "name": "Jeff F.", "role": "Guitar" },
-        { "name": "Chris K.", "role": "Bass" },
-        { "name": "Ryan T.", "role": "Drums" }
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        }
       ]
     },
     {
-      "id": "smileys-2025-09-14",
+      "id": "smileys-on-the-roxx-2025-10-07",
       "venue": "Smileys on the Roxx",
       "city": "Greenville, SC",
-      "date": { "month": "Sep", "day": "14", "year": "2025" },
+      "date": {
+        "month": "Oct",
+        "day": "7",
+        "year": "2025"
+      },
       "lineup": [
-        { "name": "Dan B.", "role": "Guitar / Vocals" },
-        { "name": "Jeff F.", "role": "Guitar" },
-        { "name": "Chris K.", "role": "Bass" },
-        { "name": "Roman", "role": "Saxophone" },
-        { "name": "Ryan T.", "role": "Drums" }
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        }
+      ]
+    },
+    {
+      "id": "td-saturday-market-2025-09-28",
+      "venue": "TD Saturday Market",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Sep",
+        "day": "28",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        }
+      ]
+    },
+    {
+      "id": "the-rusty-rudder-2025-09-21",
+      "venue": "The Rusty Rudder",
+      "city": "Anderson, SC",
+      "date": {
+        "month": "Sep",
+        "day": "21",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Walt H.",
+          "role": "Baritone Guitar"
+        },
+        {
+          "name": "Andr\u00e9 T.",
+          "role": "Upright Bass"
+        },
+        {
+          "name": "Priya S.",
+          "role": "Lap Steel"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Percussion"
+        },
+        {
+          "name": "Fiona C.",
+          "role": "Keyboard"
+        },
+        {
+          "name": "Simone K.",
+          "role": "Trumpet"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "name": "Rhonda J.",
+          "role": "Mandolin"
+        },
+        {
+          "name": "Bart L.",
+          "role": "Tambourine"
+        },
+        {
+          "name": "Marcus D.",
+          "role": "Congas"
+        },
+        {
+          "name": "Iris F.",
+          "role": "Steel Guitar"
+        },
+        {
+          "name": "Keisha M.",
+          "role": "Violin"
+        },
+        {
+          "name": "Tanya R.",
+          "role": "Flute"
+        }
+      ]
+    },
+    {
+      "id": "trailblazer-park-2025-09-13",
+      "venue": "Trailblazer Park",
+      "city": "Greer, SC",
+      "date": {
+        "month": "Sep",
+        "day": "13",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Simone K.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Vera O.",
+          "role": "Keyboard"
+        },
+        {
+          "name": "Marcus D.",
+          "role": "Percussion"
+        },
+        {
+          "name": "Gus P.",
+          "role": "Trumpet"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Steel Guitar"
+        },
+        {
+          "name": "Priya S.",
+          "role": "Congas"
+        },
+        {
+          "name": "Tanya R.",
+          "role": "Backing Vocals"
+        },
+        {
+          "name": "Walt H.",
+          "role": "Trombone"
+        },
+        {
+          "name": "Leo V.",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "name": "Dez W.",
+          "role": "Tambourine"
+        },
+        {
+          "name": "Keisha M.",
+          "role": "Flute"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Lap Steel"
+        },
+        {
+          "name": "Fiona C.",
+          "role": "Violin"
+        },
+        {
+          "name": "Rhonda J.",
+          "role": "Upright Bass"
+        }
+      ]
+    },
+    {
+      "id": "the-skullcandy-stage-2025-09-05",
+      "venue": "The Skullcandy Stage",
+      "city": "Spartanburg, SC",
+      "date": {
+        "month": "Sep",
+        "day": "5",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        }
+      ]
+    },
+    {
+      "id": "the-spinning-jenny-2025-08-30",
+      "venue": "The Spinning Jenny",
+      "city": "Greer, SC",
+      "date": {
+        "month": "Aug",
+        "day": "30",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Vera O.",
+          "role": "Keyboard"
+        },
+        {
+          "name": "Rhonda J.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Simone K.",
+          "role": "Trumpet"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Baritone Guitar"
+        },
+        {
+          "name": "Marcus D.",
+          "role": "Steel Guitar"
+        },
+        {
+          "name": "Priya S.",
+          "role": "Backing Vocals"
+        },
+        {
+          "name": "Leo V.",
+          "role": "Mandolin"
+        },
+        {
+          "name": "Gus P.",
+          "role": "Upright Bass"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Flute"
+        },
+        {
+          "name": "Dez W.",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "name": "Keisha M.",
+          "role": "Trombone"
+        },
+        {
+          "name": "Walt H.",
+          "role": "Violin"
+        },
+        {
+          "name": "Iris F.",
+          "role": "Percussion"
+        },
+        {
+          "name": "Fiona C.",
+          "role": "Lap Steel"
+        },
+        {
+          "name": "Andr\u00e9 T.",
+          "role": "Tambourine"
+        }
+      ]
+    },
+    {
+      "id": "poe-mill-music-hall-2025-08-20",
+      "venue": "Poe Mill Music Hall",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Aug",
+        "day": "20",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        }
+      ]
+    },
+    {
+      "id": "the-radio-room-2025-08-15",
+      "venue": "The Radio Room",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Aug",
+        "day": "15",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        }
+      ]
+    },
+    {
+      "id": "roost-chicken-beer-2025-08-02",
+      "venue": "Roost Chicken + Beer",
+      "city": "Greenville, SC",
+      "date": {
+        "month": "Aug",
+        "day": "2",
+        "year": "2025"
+      },
+      "lineup": [
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Andr\u00e9 T.",
+          "role": "Lap Steel"
+        },
+        {
+          "name": "Dez W.",
+          "role": "Trombone"
+        },
+        {
+          "name": "Iris F.",
+          "role": "Acoustic Guitar"
+        },
+        {
+          "name": "Keisha M.",
+          "role": "Violin"
+        },
+        {
+          "name": "Fiona C.",
+          "role": "Steel Guitar"
+        },
+        {
+          "name": "Priya S.",
+          "role": "Upright Bass"
+        },
+        {
+          "name": "Simone K.",
+          "role": "Percussion"
+        },
+        {
+          "name": "Gus P.",
+          "role": "Congas"
+        },
+        {
+          "name": "Marcus D.",
+          "role": "Keyboard"
+        },
+        {
+          "name": "Cal N.",
+          "role": "Harmonica"
+        },
+        {
+          "name": "Theo B.",
+          "role": "Trumpet"
+        },
+        {
+          "name": "Walt H.",
+          "role": "Baritone Guitar"
+        },
+        {
+          "name": "Vera O.",
+          "role": "Tambourine"
+        },
+        {
+          "name": "Tanya R.",
+          "role": "Mandolin"
+        }
       ]
     }
   ]
