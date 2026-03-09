@@ -1,3 +1,3 @@
 https://cosmichawg.com
 
-https://admin.cosmichawg.com
+https://cosmichawg.com/admin
