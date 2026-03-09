@@ -30,7 +30,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-SITE_DIR          = Path(os.environ.get("SITE_DIR", "/app"))
+# Site files are copied to a temp dir so the real JSON files are never modified
+import shutil
+_REAL_SITE = Path("/app")
+_TEST_SITE = Path("/tmp/testsite")
+if _TEST_SITE.exists():
+    shutil.rmtree(_TEST_SITE)
+shutil.copytree(_REAL_SITE, _TEST_SITE)
+
+SITE_DIR          = _TEST_SITE
 BASE_URL          = "http://localhost:8000"
 PORT              = 8000
 HEADLESS          = True
