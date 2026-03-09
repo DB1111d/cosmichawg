@@ -1,6 +1,30 @@
 [
-  { "date": "2025-11-28", "venue": "Poe Mill Music Hall",                    "city": "Greenville, SC", "lineupId": "poemill-2025-11-28",     "setlistId": "poemill-2025-11-28" },
-  { "date": "2025-10-25", "venue": "Corey James Memorial Good Time Benefit", "city": "Greer, SC",      "lineupId": "corey-james-2025-10-25", "setlistId": "corey-james-2025-10-25" },
-  { "date": "2025-10-04", "venue": "Artistry Workshops & Gallery",           "city": "Greenville, SC", "lineupId": "artistry-2025-10-04",    "setlistId": "artistry-2025-10-04" },
-  { "date": "2025-09-14", "venue": "Smileys on the Roxx",                    "city": "Greenville, SC", "lineupId": "smileys-2025-09-14",     "setlistId": "smileys-2025-09-14" }
+  {
+    "date": "2025-11-28",
+    "venue": "Poe Mill Music Hall",
+    "city": "Greenville, SC",
+    "lineupId": "poemill-2025-11-28",
+    "setlistId": "poemill-2025-11-28"
+  },
+  {
+    "date": "2025-10-29",
+    "venue": "Corey James Memorial Good Time Benefit",
+    "city": "Greer, SC",
+    "lineupId": "corey-james-memorial-good-time-benefit-2025-10-29",
+    "setlistId": "corey-james-memorial-good-time-benefit-2025-10-29"
+  },
+  {
+    "date": "2025-10-04",
+    "venue": "Artistry Workshops & Gallery",
+    "city": "Greenville, SC",
+    "lineupId": "artistry-2025-10-04",
+    "setlistId": "artistry-2025-10-04"
+  },
+  {
+    "date": "2025-09-14",
+    "venue": "Smileys on the Roxx",
+    "city": "Greenville, SC",
+    "lineupId": "smileys-2025-09-14",
+    "setlistId": "smileys-2025-09-14"
+  }
 ]

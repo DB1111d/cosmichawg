@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Admin — Cosmic Hawg</title>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #f5f3ef;
+    --surface: #ffffff;
+    --border: #ddd9d0;
+    --accent: #8a6820;
+    --accent2: #c8a84b;
+    --text: #1a1814;
+    --muted: #8a8070;
+    --danger: #b94040;
+    --success: #4a9b6f;
+    --input-bg: #faf8f4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--surface);
+  }
+  header h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.4rem;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  header span {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+
+  /* ── LAYOUT ── */
+  .layout { display: flex; min-height: calc(100vh - 62px); }
+
+  nav {
+    width: 190px;
+    min-width: 190px;
+    border-right: 1px solid var(--border);
+    background: var(--surface);
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .nav-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: var(--muted);
+    text-transform: uppercase;
+    padding: 0 20px 8px;
+  }
+  nav button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.15s;
+    border-left: 2px solid transparent;
+    text-transform: uppercase;
+  }
+  nav button:hover { color: var(--text); background: rgba(200,168,75,0.05); }
+  nav button.active { color: var(--accent); border-left-color: var(--accent); background: rgba(200,168,75,0.07); }
+  .nav-divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; }
+
+  /* ── MAIN ── */
+  main { flex: 1; padding: 32px; overflow-y: auto; }
+
+  .section { display: none; }
+  .section.active { display: block; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.2rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ── BUTTONS ── */
+  .btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: none;
+    padding: 9px 18px;
+    cursor: pointer;
+    transition: all 0.15s;
+    border-radius: 2px;
+  }
+  .btn-primary { background: var(--accent); color: #0e0d0b; }
+  .btn-primary:hover { background: #d9bc6a; }
+  .btn-secondary { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+  .btn-secondary:hover { color: var(--text); border-color: var(--muted); }
+  .btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); }
+  .btn-danger:hover { background: var(--danger); color: #fff; }
+  .btn-sm { padding: 5px 10px; font-size: 0.65rem; }
+  .btn-icon { padding: 5px 8px; font-size: 0.75rem; }
+
+  /* ── CARDS ── */
+  .card-list { display: flex; flex-direction: column; gap: 10px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .card:hover { border-color: var(--accent2); }
+  .card-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    min-width: 90px;
+  }
+  .card-info { flex: 1; }
+  .card-venue { font-weight: 600; font-size: 0.9rem; }
+  .card-city { color: var(--muted); font-size: 0.78rem; margin-top: 2px; }
+  .card-actions { display: flex; gap: 8px; flex-shrink: 0; }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 28px;
+    position: relative;
+  }
+  .modal-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 1rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .modal-close:hover { color: var(--text); }
+
+  /* ── FORM ── */
+  .form-group { margin-bottom: 16px; }
+  .form-label {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .form-input {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.875rem;
+    padding: 9px 12px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .form-input:focus { border-color: var(--accent); }
+  .form-row { display: flex; gap: 12px; }
+  .form-row .form-group { flex: 1; }
+  .form-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
+
+  /* ── DYNAMIC LISTS (songs / members) ── */
+  .dyn-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+  .dyn-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 6px 10px;
+  }
+  .dyn-item .drag-handle {
+    color: var(--muted);
+    cursor: grab;
+    font-size: 0.8rem;
+    user-select: none;
+  }
+  .dyn-item input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+  }
+  .dyn-item .remove-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 2px 4px;
+    border-radius: 2px;
+    line-height: 1;
+  }
+  .dyn-item .remove-btn:hover { color: var(--danger); }
+  .add-item-btn {
+    background: none;
+    border: 1px dashed var(--border);
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.15s;
+  }
+  .add-item-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── TOAST ── */
+  #toast {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    background: var(--success);
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 10px 18px;
+    border-radius: 3px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.2s;
+    pointer-events: none;
+    z-index: 999;
+  }
+  #toast.show { opacity: 1; transform: translateY(0); }
+  #toast.error { background: var(--danger); }
+
+  .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px dashed var(--border);
+    border-radius: 3px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    background: rgba(200,168,75,0.12);
+    color: var(--accent);
+    margin-left: 6px;
+  }
+
+  .section-hint {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── LOGIN OVERLAY ── -->
+<div id="login-overlay" style="position:fixed;inset:0;background:#f5f3ef;z-index:9999;display:flex;align-items:center;justify-content:center;">
+  <div style="width:340px;background:#fff;border:1px solid #ddd9d0;border-radius:4px;padding:36px;">
+    <div style="font-family:'Special Elite',cursive;font-size:1.3rem;color:#8a6820;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px;">Cosmic Hawg</div>
+    <div id="login-error" style="display:none;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:#b94040;letter-spacing:1px;margin-bottom:14px;"></div>
+    <div class="form-group">
+      <label class="form-label">Username</label>
+      <input type="text" id="login-user" class="form-input" autocomplete="username"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Password</label>
+      <input type="password" id="login-pass" class="form-input" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()"/>
+    </div>
+    <button class="btn btn-primary" style="width:100%;margin-top:4px;" onclick="doLogin()">Sign In</button>
+  </div>
+</div>
+
+<header>
+  <h1>Cosmic Hawg</h1>
+  <span>Admin</span>
+  <button class="btn btn-secondary btn-sm" id="logout-btn" style="margin-left:auto;" onclick="doLogout()">Logout</button>
+</header>
+
+<div class="layout">
+  <nav>
+    <div class="nav-label">Manage</div>
+    <button class="active" onclick="switchSection('shows', this)">Shows</button>
+    <button onclick="switchSection('setlists', this)">Setlists</button>
+    <button onclick="switchSection('lineups', this)">Lineups</button>
+  </nav>
+
+  <main>
+    <!-- SHOWS -->
+    <div id="section-shows" class="section active">
+      <div class="section-header">
+        <div class="section-title">Shows</div>
+        <button class="btn btn-primary" onclick="openModal('show-modal')">+ Add Show</button>
+      </div>
+      <p class="section-hint">// shows.json</p>
+      <div id="shows-list" class="card-list"></div>
+    </div>
+
+    <!-- SETLISTS -->
+    <div id="section-setlists" class="section">
+      <div class="section-header">
+        <div class="section-title">Setlists</div>
+        <button class="btn btn-primary" onclick="openModal('setlist-modal')">+ Add Setlist</button>
+      </div>
+      <p class="section-hint">// setlists.json</p>
+      <div id="setlists-list" class="card-list"></div>
+    </div>
+
+    <!-- LINEUPS -->
+    <div id="section-lineups" class="section">
+      <div class="section-header">
+        <div class="section-title">Lineups</div>
+        <button class="btn btn-primary" onclick="openModal('lineup-modal')">+ Add Lineup</button>
+      </div>
+      <p class="section-hint">// lineups.json</p>
+      <div id="lineups-list" class="card-list"></div>
+    </div>
+  </main>
+</div>
+
+<!-- ── SHOW MODAL ── -->
+<div id="show-modal" class="modal-overlay" onclick="overlayClose(event,'show-modal')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('show-modal')">✕</button>
+    <div class="modal-title" id="show-modal-title">Add Show</div>
+    <input type="hidden" id="show-edit-idx" value=""/>
+    <div class="form-group">
+      <label class="form-label">Date</label>
+      <input type="date" id="show-date" class="form-input"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Venue</label>
+      <input type="text" id="show-venue" class="form-input" placeholder="Poe Mill Music Hall"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">City</label>
+      <input type="text" id="show-city" class="form-input" placeholder="Greenville, SC"/>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-secondary" onclick="closeModal('show-modal')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveShow()">Save Show</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── SETLIST MODAL ── -->
+<div id="setlist-modal" class="modal-overlay" onclick="overlayClose(event,'setlist-modal')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('setlist-modal')">✕</button>
+    <div class="modal-title" id="setlist-modal-title">Add Setlist</div>
+    <input type="hidden" id="setlist-edit-idx" value=""/>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Date</label>
+        <input type="date" id="setlist-date" class="form-input"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">City</label>
+        <input type="text" id="setlist-city" class="form-input" placeholder="Greenville, SC"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Venue</label>
+      <input type="text" id="setlist-venue" class="form-input" placeholder="Poe Mill Music Hall"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Songs</label>
+      <div id="songs-list" class="dyn-list"></div>
+      <button class="add-item-btn" onclick="addSong()">+ Add Song</button>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-secondary" onclick="closeModal('setlist-modal')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveSetlist()">Save Setlist</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── LINEUP MODAL ── -->
+<div id="lineup-modal" class="modal-overlay" onclick="overlayClose(event,'lineup-modal')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('lineup-modal')">✕</button>
+    <div class="modal-title" id="lineup-modal-title">Add Lineup</div>
+    <input type="hidden" id="lineup-edit-idx" value=""/>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Date</label>
+        <input type="date" id="lineup-date" class="form-input"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">City</label>
+        <input type="text" id="lineup-city" class="form-input" placeholder="Greenville, SC"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Venue</label>
+      <input type="text" id="lineup-venue" class="form-input" placeholder="Poe Mill Music Hall"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Members</label>
+      <div id="members-list" class="dyn-list"></div>
+      <button class="add-item-btn" onclick="addMember()">+ Add Member</button>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-secondary" onclick="closeModal('lineup-modal')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveLineup()">Save Lineup</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div id="toast"></div>
+
+<script>
+const API = '';
+
+// ── Nav ──
+function switchSection(name, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('section-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── Modal helpers ──
+function openModal(id) { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+function overlayClose(e, id) { if (e.target === document.getElementById(id)) closeModal(id); }
+
+// ── Toast ──
+function toast(msg, isError = false) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'show' + (isError ? ' error' : '');
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.className = '', 2500);
+}
+
+// ── Date formatting ──
+function fmtDate(dateStr) {
+  const [y, m, d] = dateStr.split('-');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${months[parseInt(m)-1]} ${parseInt(d)}, ${y}`;
+}
+
+function objDateToISO(d) {
+  const mm = {'Jan':'01','Feb':'02','Mar':'03','Apr':'04','May':'05','Jun':'06',
+              'Jul':'07','Aug':'08','Sep':'09','Oct':'10','Nov':'11','Dec':'12'};
+  return `${d.year}-${mm[d.month]}-${String(d.day).padStart(2,'0')}`;
+}
+
+// ════════════════════════════════
+// SHOWS
+// ════════════════════════════════
+async function loadShows() {
+  const res = await fetch(API + '/api/shows');
+  const shows = await res.json();
+  const list = document.getElementById('shows-list');
+  list.innerHTML = '';
+  if (!shows.length) { list.innerHTML = '<div class="empty-state">No shows yet</div>'; return; }
+  shows.forEach((s, i) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-date">${s.date}</div>
+      <div class="card-info">
+        <div class="card-venue">${s.venue}</div>
+        <div class="card-city">${s.city}</div>
+      </div>
+      <div class="card-actions">
+        <button class="btn btn-secondary btn-sm" onclick="editShow(${i})">Edit</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteShow(${i})">Delete</button>
+      </div>`;
+    list.appendChild(card);
+  });
+}
+
+function editShow(idx) {
+  fetch(API + '/api/shows').then(r => r.json()).then(shows => {
+    const s = shows[idx];
+    document.getElementById('show-modal-title').textContent = 'Edit Show';
+    document.getElementById('show-edit-idx').value = idx;
+    document.getElementById('show-date').value = s.date;
+    document.getElementById('show-venue').value = s.venue;
+    document.getElementById('show-city').value = s.city;
+    openModal('show-modal');
+  });
+}
+
+async function saveShow() {
+  const idx = document.getElementById('show-edit-idx').value;
+  const payload = {
+    date:  document.getElementById('show-date').value,
+    venue: document.getElementById('show-venue').value.trim(),
+    city:  document.getElementById('show-city').value.trim()
+  };
+  if (!payload.date || !payload.venue || !payload.city) { toast('All fields required', true); return; }
+  const url = idx !== '' ? `${API}/api/shows/${idx}` : `${API}/api/shows`;
+  const method = idx !== '' ? 'PUT' : 'POST';
+  await fetch(url, { method, headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+  closeModal('show-modal');
+  resetShowForm();
+  loadShows();
+  toast(idx !== '' ? 'Show updated!' : 'Show added!');
+}
+
+async function deleteShow(idx) {
+  if (!confirm('Delete this show?')) return;
+  await fetch(`${API}/api/shows/${idx}`, { method: 'DELETE' });
+  loadShows();
+  toast('Show deleted');
+}
+
+function resetShowForm() {
+  document.getElementById('show-modal-title').textContent = 'Add Show';
+  document.getElementById('show-edit-idx').value = '';
+  document.getElementById('show-date').value = '';
+  document.getElementById('show-venue').value = '';
+  document.getElementById('show-city').value = '';
+}
+
+// ════════════════════════════════
+// SETLISTS
+// ════════════════════════════════
+async function loadSetlists() {
+  const res = await fetch(API + '/api/setlists');
+  const data = await res.json();
+  const shows = data.shows || [];
+  const list = document.getElementById('setlists-list');
+  list.innerHTML = '';
+  if (!shows.length) { list.innerHTML = '<div class="empty-state">No setlists yet</div>'; return; }
+  shows.forEach((s, i) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-date">${s.date.month} ${s.date.day}, ${s.date.year}</div>
+      <div class="card-info">
+        <div class="card-venue">${s.venue} <span class="badge">${s.setlist.length} songs</span></div>
+        <div class="card-city">${s.city}</div>
+      </div>
+      <div class="card-actions">
+        <button class="btn btn-secondary btn-sm" onclick="editSetlist(${i})">Edit</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteSetlist(${i})">Delete</button>
+      </div>`;
+    list.appendChild(card);
+  });
+}
+
+function addSong(title = '') {
+  const list = document.getElementById('songs-list');
+  const item = document.createElement('div');
+  item.className = 'dyn-item';
+  item.innerHTML = `
+    <span class="drag-handle">⠿</span>
+    <input type="text" placeholder="Song title" value="${title.replace(/"/g,'&quot;')}"/>
+    <button class="remove-btn" onclick="this.parentElement.remove()">✕</button>`;
+  list.appendChild(item);
+}
+
+function editSetlist(idx) {
+  fetch(API + '/api/setlists').then(r => r.json()).then(data => {
+    const s = data.shows[idx];
+    document.getElementById('setlist-modal-title').textContent = 'Edit Setlist';
+    document.getElementById('setlist-edit-idx').value = idx;
+    document.getElementById('setlist-date').value = objDateToISO(s.date);
+    document.getElementById('setlist-venue').value = s.venue;
+    document.getElementById('setlist-city').value = s.city;
+    document.getElementById('songs-list').innerHTML = '';
+    s.setlist.forEach(song => addSong(song.title));
+    openModal('setlist-modal');
+  });
+}
+
+async function saveSetlist() {
+  const idx = document.getElementById('setlist-edit-idx').value;
+  const songs = Array.from(document.querySelectorAll('#songs-list .dyn-item input'))
+    .map(i => i.value.trim()).filter(Boolean);
+  const payload = {
+    date:  document.getElementById('setlist-date').value,
+    venue: document.getElementById('setlist-venue').value.trim(),
+    city:  document.getElementById('setlist-city').value.trim(),
+    songs
+  };
+  if (!payload.date || !payload.venue || !payload.city || !songs.length) {
+    toast('All fields + at least 1 song required', true); return;
+  }
+  const url = idx !== '' ? `${API}/api/setlists/${idx}` : `${API}/api/setlists`;
+  const method = idx !== '' ? 'PUT' : 'POST';
+  await fetch(url, { method, headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+  closeModal('setlist-modal');
+  resetSetlistForm();
+  loadSetlists();
+  toast(idx !== '' ? 'Setlist updated!' : 'Setlist added!');
+}
+
+async function deleteSetlist(idx) {
+  if (!confirm('Delete this setlist?')) return;
+  await fetch(`${API}/api/setlists/${idx}`, { method: 'DELETE' });
+  loadSetlists();
+  toast('Setlist deleted');
+}
+
+function resetSetlistForm() {
+  document.getElementById('setlist-modal-title').textContent = 'Add Setlist';
+  document.getElementById('setlist-edit-idx').value = '';
+  document.getElementById('setlist-date').value = '';
+  document.getElementById('setlist-venue').value = '';
+  document.getElementById('setlist-city').value = '';
+  document.getElementById('songs-list').innerHTML = '';
+}
+
+// ════════════════════════════════
+// LINEUPS
+// ════════════════════════════════
+async function loadLineups() {
+  const res = await fetch(API + '/api/lineups');
+  const data = await res.json();
+  const shows = data.shows || [];
+  const list = document.getElementById('lineups-list');
+  list.innerHTML = '';
+  if (!shows.length) { list.innerHTML = '<div class="empty-state">No lineups yet</div>'; return; }
+  shows.forEach((s, i) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-date">${s.date.month} ${s.date.day}, ${s.date.year}</div>
+      <div class="card-info">
+        <div class="card-venue">${s.venue} <span class="badge">${s.lineup.length} members</span></div>
+        <div class="card-city">${s.city}</div>
+      </div>
+      <div class="card-actions">
+        <button class="btn btn-secondary btn-sm" onclick="editLineup(${i})">Edit</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteLineup(${i})">Delete</button>
+      </div>`;
+    list.appendChild(card);
+  });
+}
+
+function addMember(name = '', role = '') {
+  const list = document.getElementById('members-list');
+  const item = document.createElement('div');
+  item.className = 'dyn-item';
+  item.innerHTML = `
+    <span class="drag-handle">⠿</span>
+    <input type="text" placeholder="Name" value="${name.replace(/"/g,'&quot;')}" style="flex:1.2"/>
+    <input type="text" placeholder="Role (e.g. Guitar / Vocals)" value="${role.replace(/"/g,'&quot;')}" style="flex:2"/>
+    <button class="remove-btn" onclick="this.parentElement.remove()">✕</button>`;
+  list.appendChild(item);
+}
+
+function editLineup(idx) {
+  fetch(API + '/api/lineups').then(r => r.json()).then(data => {
+    const s = data.shows[idx];
+    document.getElementById('lineup-modal-title').textContent = 'Edit Lineup';
+    document.getElementById('lineup-edit-idx').value = idx;
+    document.getElementById('lineup-date').value = objDateToISO(s.date);
+    document.getElementById('lineup-venue').value = s.venue;
+    document.getElementById('lineup-city').value = s.city;
+    document.getElementById('members-list').innerHTML = '';
+    s.lineup.forEach(m => addMember(m.name, m.role));
+    openModal('lineup-modal');
+  });
+}
+
+async function saveLineup() {
+  const idx = document.getElementById('lineup-edit-idx').value;
+  const items = document.querySelectorAll('#members-list .dyn-item');
+  const members = Array.from(items).map(item => {
+    const inputs = item.querySelectorAll('input');
+    return { name: inputs[0].value.trim(), role: inputs[1].value.trim() };
+  }).filter(m => m.name);
+  const payload = {
+    date:  document.getElementById('lineup-date').value,
+    venue: document.getElementById('lineup-venue').value.trim(),
+    city:  document.getElementById('lineup-city').value.trim(),
+    members
+  };
+  if (!payload.date || !payload.venue || !payload.city || !members.length) {
+    toast('All fields + at least 1 member required', true); return;
+  }
+  const url = idx !== '' ? `${API}/api/lineups/${idx}` : `${API}/api/lineups`;
+  const method = idx !== '' ? 'PUT' : 'POST';
+  await fetch(url, { method, headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+  closeModal('lineup-modal');
+  resetLineupForm();
+  loadLineups();
+  toast(idx !== '' ? 'Lineup updated!' : 'Lineup added!');
+}
+
+async function deleteLineup(idx) {
+  if (!confirm('Delete this lineup?')) return;
+  await fetch(`${API}/api/lineups/${idx}`, { method: 'DELETE' });
+  loadLineups();
+  toast('Lineup deleted');
+}
+
+function resetLineupForm() {
+  document.getElementById('lineup-modal-title').textContent = 'Add Lineup';
+  document.getElementById('lineup-edit-idx').value = '';
+  document.getElementById('lineup-date').value = '';
+  document.getElementById('lineup-venue').value = '';
+  document.getElementById('lineup-city').value = '';
+  document.getElementById('members-list').innerHTML = '';
+}
+
+// ── Reset modals on open ──
+document.getElementById('show-modal').addEventListener('click', function(e) {
+  if (e.target === this) resetShowForm();
+});
+
+// ── Init ──
+loadShows();
+loadSetlists();
+loadLineups();
+// ── Auth ──
+async function checkAuth() {
+  const res = await fetch('/auth-check');
+  const data = await res.json();
+  if (data.ok) {
+    document.getElementById('login-overlay').style.display = 'none';
+  }
+}
+
+async function doLogin() {
+  const user = document.getElementById('login-user').value.trim();
+  const password = document.getElementById('login-pass').value;
+  const errEl = document.getElementById('login-error');
+  const res = await fetch('/login', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({user, password})
+  });
+  const data = await res.json();
+  if (data.ok) {
+    document.getElementById('login-overlay').style.display = 'none';
+    loadShows(); loadSetlists(); loadLineups();
+  } else {
+    errEl.textContent = data.error || 'Login failed';
+    errEl.style.display = '';
+    document.getElementById('login-pass').value = '';
+  }
+}
+
+async function doLogout() {
+  await fetch('/logout', {method:'POST'});
+  document.getElementById('login-overlay').style.display = 'flex';
+  document.getElementById('login-user').value = '';
+  document.getElementById('login-pass').value = '';
+}
+
+checkAuth();
+
+</script>
+</body>
+</html>
