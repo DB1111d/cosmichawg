@@ -755,22 +755,45 @@
   const TRACK_API = 'https://nlmytm1ro3.execute-api.us-east-2.amazonaws.com/prod/track';
   const SITE = 'cosmichawg.com';
 
+  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
+  if (/bot|crawler|spider|crawling/i.test(navigator.userAgent)) return;
+
   let sessionId = sessionStorage.getItem('_bsid');
   if (!sessionId) {
     sessionId = Math.random().toString(36).slice(2) + Date.now().toString(36);
     sessionStorage.setItem('_bsid', sessionId);
   }
 
-  function send(payload) {
+  let geoData = JSON.parse(sessionStorage.getItem('_bgeo') || 'null');
+
+  function getGeo() {
+    return new Promise((resolve) => {
+      if (geoData) return resolve(geoData);
+      fetch('https://ip-api.com/json/?fields=status,country,regionName,city', { keepalive: true })
+        .then(r => r.json())
+        .then(d => {
+          if (d.status === 'success') {
+            geoData = { country: d.country, region: d.regionName, city: d.city };
+          } else {
+            geoData = {};
+          }
+          sessionStorage.setItem('_bgeo', JSON.stringify(geoData));
+          resolve(geoData);
+        })
+        .catch(() => { geoData = {}; resolve(geoData); });
+    });
+  }
+
+  function send(payload, useBeacon) {
     const body = Object.assign({
       site: SITE,
       path: location.pathname,
       referrer: document.referrer || 'direct',
       userAgent: navigator.userAgent,
       sessionId,
-    }, payload);
+    }, geoData || {}, payload);
 
-    if (payload.eventType === 'pageleave' && navigator.sendBeacon) {
+    if (useBeacon && navigator.sendBeacon) {
       navigator.sendBeacon(TRACK_API, JSON.stringify(body));
     } else {
       fetch(TRACK_API, {
@@ -783,10 +806,13 @@
   }
 
   const pageStart = Date.now();
-  send({ eventType: 'pageview' });
+
+  getGeo().then(() => {
+    send({ eventType: 'pageview' }, false);
+  });
 
   function onLeave() {
-    send({ eventType: 'pageleave', duration: Date.now() - pageStart });
+    send({ eventType: 'pageleave', duration: Date.now() - pageStart }, true);
   }
   window.addEventListener('pagehide', onLeave);
   window.addEventListener('beforeunload', onLeave);
@@ -798,7 +824,7 @@
     const text = (el.innerText || el.value || el.getAttribute('aria-label') || '').trim().slice(0, 100);
     const href = el.getAttribute('href') || '';
     if (tag === 'a' && (!href || href === '#')) return;
-    send({ eventType: 'click', elementTag: tag, elementText: text || undefined, elementHref: href || undefined });
+    send({ eventType: 'click', elementTag: tag, elementText: text || undefined, elementHref: href || undefined }, false);
   }, true);
 })();
 </script>
