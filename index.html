@@ -769,11 +769,11 @@
   function getGeo() {
     return new Promise((resolve) => {
       if (geoData) return resolve(geoData);
-      fetch('https://freeipapi.com/api/json', { keepalive: true })
+      fetch('https://ipapi.co/json/', { keepalive: true })
         .then(r => r.json())
         .then(d => {
-          if (d.cityName) {
-            geoData = { country: d.countryName, region: d.regionName, city: d.cityName };
+          if (d.city) {
+            geoData = { country: d.country_name, region: d.region, city: d.city };
           } else {
             geoData = {};
           }
