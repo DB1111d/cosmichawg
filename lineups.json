@@ -4,54 +4,136 @@
       "id": "poemill-2025-11-28",
       "venue": "Poe Mill Music Hall",
       "city": "Greenville, SC",
-      "date": { "month": "Nov", "day": "28", "year": "2025" },
+      "date": {
+        "month": "Nov",
+        "day": "28",
+        "year": "2025"
+      },
       "lineup": [
-        { "name": "Eddie S.", "role": "Vocals" },
-        { "name": "Robbie B.", "role": "Keyboard / Vocals" },
-        { "name": "Dan B.", "role": "Guitar / Vocals" },
-        { "name": "Jeff F.", "role": "Guitar" },
-        { "name": "Chris K.", "role": "Bass" },
-        { "name": "Skip", "role": "Percussion" },
-        { "name": "Ryan T.", "role": "Drums" }
+        {
+          "name": "Eddie S.",
+          "role": "Vocals"
+        },
+        {
+          "name": "Robbie B.",
+          "role": "Keyboard / Vocals"
+        },
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Skip",
+          "role": "Percussion"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        }
       ]
     },
     {
-      "id": "corey-james-2025-10-25",
+      "id": "corey-james-memorial-good-time-benefit-2025-10-25",
       "venue": "Corey James Memorial Good Time Benefit",
       "city": "Greer, SC",
-      "date": { "month": "Oct", "day": "25", "year": "2025" },
+      "date": {
+        "month": "Oct",
+        "day": "25",
+        "year": "2025"
+      },
       "lineup": [
-        { "name": "Robbie B.", "role": "Keyboards / Vocals" },
-        { "name": "Dan B.", "role": "Guitar / Vocals" },
-        { "name": "Jeff F.", "role": "Guitar" },
-        { "name": "Chris K.", "role": "Bass" },
-        { "name": "Nelson R.", "role": "Saxophone" },
-        { "name": "Ryan T.", "role": "Drums" }
+        {
+          "name": "Robbie B.",
+          "role": "Keyboards / Vocals"
+        },
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Nelson R.",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        }
       ]
     },
     {
       "id": "artistry-2025-10-04",
       "venue": "Artistry Workshops & Gallery",
       "city": "Greenville, SC",
-      "date": { "month": "Oct", "day": "04", "year": "2025" },
+      "date": {
+        "month": "Oct",
+        "day": "04",
+        "year": "2025"
+      },
       "lineup": [
-        { "name": "Dan B.", "role": "Guitar / Vocals" },
-        { "name": "Jeff F.", "role": "Guitar" },
-        { "name": "Chris K.", "role": "Bass" },
-        { "name": "Ryan T.", "role": "Drums" }
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        }
       ]
     },
     {
       "id": "smileys-2025-09-14",
       "venue": "Smileys on the Roxx",
       "city": "Greenville, SC",
-      "date": { "month": "Sep", "day": "14", "year": "2025" },
+      "date": {
+        "month": "Sep",
+        "day": "14",
+        "year": "2025"
+      },
       "lineup": [
-        { "name": "Dan B.", "role": "Guitar / Vocals" },
-        { "name": "Jeff F.", "role": "Guitar" },
-        { "name": "Chris K.", "role": "Bass" },
-        { "name": "Roman", "role": "Saxophone" },
-        { "name": "Ryan T.", "role": "Drums" }
+        {
+          "name": "Dan B.",
+          "role": "Guitar / Vocals"
+        },
+        {
+          "name": "Jeff F.",
+          "role": "Guitar"
+        },
+        {
+          "name": "Chris K.",
+          "role": "Bass"
+        },
+        {
+          "name": "Roman",
+          "role": "Saxophone"
+        },
+        {
+          "name": "Ryan T.",
+          "role": "Drums"
+        }
       ]
     }
   ]
