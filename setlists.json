@@ -4,67 +4,153 @@
       "id": "poemill-2025-11-28",
       "venue": "Poe Mill Music Hall",
       "city": "Greenville, SC",
-      "date": { "month": "Nov", "day": "28", "year": "2025" },
+      "date": {
+        "month": "Nov",
+        "day": "28",
+        "year": "2025"
+      },
       "setlist": [
-        { "title": "Graziatto" },
-        { "title": "All My Days" },
-        { "title": "Stay" },
-        { "title": "Down By The River" },
-        { "title": "Greetings" },
-        { "title": "Nightrider" },
-        { "title": "G13" },
-        { "title": "One More Time (Try Me)" },
-        { "title": "It Ain't No Use" }
+        {
+          "title": "Graziatto"
+        },
+        {
+          "title": "All My Days"
+        },
+        {
+          "title": "Stay"
+        },
+        {
+          "title": "Down By The River"
+        },
+        {
+          "title": "Greetings"
+        },
+        {
+          "title": "Nightrider"
+        },
+        {
+          "title": "G13"
+        },
+        {
+          "title": "One More Time (Try Me)"
+        },
+        {
+          "title": "It Ain't No Use"
+        }
       ]
     },
     {
-      "id": "corey-james-2025-10-25",
+      "id": "corey-james-memorial-good-time-benefit-2025-10-25",
       "venue": "Corey James Memorial Good Time Benefit",
       "city": "Greer, SC",
-      "date": { "month": "Oct", "day": "25", "year": "2025" },
+      "date": {
+        "month": "Oct",
+        "day": "25",
+        "year": "2025"
+      },
       "setlist": [
-        { "title": "Down By The River" },
-        { "title": "Graziatto" },
-        { "title": "Stay" },
-        { "title": "Rollo" },
-        { "title": "One More Time (Try Me)" },
-        { "title": "It Ain't No Use" },
-        { "title": "Nightrider" },
-        { "title": "Right Place Wrong Time" },
-        { "title": "G13" }
+        {
+          "title": "Down By The River"
+        },
+        {
+          "title": "Graziatto"
+        },
+        {
+          "title": "Stay"
+        },
+        {
+          "title": "Rollo"
+        },
+        {
+          "title": "One More Time (Try Me)"
+        },
+        {
+          "title": "It Ain't No Use"
+        },
+        {
+          "title": "Nightrider"
+        },
+        {
+          "title": "Right Place Wrong Time"
+        },
+        {
+          "title": "G13"
+        }
       ]
     },
     {
       "id": "artistry-2025-10-04",
       "venue": "Artistry Workshops & Gallery",
       "city": "Greenville, SC",
-      "date": { "month": "Oct", "day": "4", "year": "2025" },
+      "date": {
+        "month": "Oct",
+        "day": "4",
+        "year": "2025"
+      },
       "setlist": [
-        { "title": "Sabrosa" },
-        { "title": "One More Time (Try Me)" },
-        { "title": "All My Days" },
-        { "title": "Greetings" },
-        { "title": "Down By The River" },
-        { "title": "Graziatto" },
-        { "title": "Red Moon" },
-        { "title": "G13" },
-        { "title": "Nightrider" },
-        { "title": "It Ain't No Use" }
+        {
+          "title": "Sabrosa"
+        },
+        {
+          "title": "One More Time (Try Me)"
+        },
+        {
+          "title": "All My Days"
+        },
+        {
+          "title": "Greetings"
+        },
+        {
+          "title": "Down By The River"
+        },
+        {
+          "title": "Graziatto"
+        },
+        {
+          "title": "Red Moon"
+        },
+        {
+          "title": "G13"
+        },
+        {
+          "title": "Nightrider"
+        },
+        {
+          "title": "It Ain't No Use"
+        }
       ]
     },
     {
       "id": "smileys-2025-09-14",
       "venue": "Smileys on the Roxx",
       "city": "Greenville, SC",
-      "date": { "month": "Sep", "day": "14", "year": "2025" },
+      "date": {
+        "month": "Sep",
+        "day": "14",
+        "year": "2025"
+      },
       "setlist": [
-        { "title": "One More Time (Try Me)" },
-        { "title": "Nightrider" },
-        { "title": "Greetings" },
-        { "title": "Graziatto" },
-        { "title": "Down By The River" },
-        { "title": "G13" },
-        { "title": "It Ain't No Use" }
+        {
+          "title": "One More Time (Try Me)"
+        },
+        {
+          "title": "Nightrider"
+        },
+        {
+          "title": "Greetings"
+        },
+        {
+          "title": "Graziatto"
+        },
+        {
+          "title": "Down By The River"
+        },
+        {
+          "title": "G13"
+        },
+        {
+          "title": "It Ain't No Use"
+        }
       ]
     }
   ]
